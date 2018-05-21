@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>COMIDINHAS - EACH USP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+	
+	@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+	
+
+	.navbar-dark {
+		background-color: #fdb523;
+		font-family: 'Do Hyeon', sans-serif;
+		color: green;
+		font-size: 25px;
+	}
+
+
+	body {
+		background-image: url("../resources/bg.jpg");
+	}
+
+	.card{
+		background-color: #E0E0E0;
+		max-height: 280px; 
+		border-radius: 10px 10px 0px 0px;
+
+	}
+
+	.row{
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	}
+
+	.card-text {
+		margin-bottom: 50px;
+		min-height: 250px;
+		min-width: 250px;
+		max-height: 250px;
+
+	}
+
+	.card-title {
+		border-radius: 10px 10px 0px 0px;
+		min-height: 40px;
+		text-align: center;
+
+		background-color: #fdb523;
+	}
+
+	.card-title-text {
+		font-family: 'Do Hyeon', sans-serif;
+	margin-top: -20px;
+	}
+
+	.shadow {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+  }
+
+
+  
+}
+
+.img-fluid {  /* 50% 50% centers image in div */
+  width: 100px;
+  height: 100px;
+}
+
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    
+  </button><a class="navbar-brand mr-auto" href="#"><img src="../resources/logo.png" width="110px"></a>
+  
+  <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo01">
+ 
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="../../index.html">Produtos<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="sobre.html">Sobre</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Entrar</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-sm-6 p-3">
+			<div class="card text-center center-block" > 
+				<div class="card-block box" >
+					<div class="card-title"> <br>
+						<h4 class="card-title-text">Login</h4>
+					</div>
+					<label for="uname"><b>Usuário</b></label>
+    <input type="text" placeholder="Escreve seu usuario" name="uname" required>
+    <label for="psw"><b>Senha</b></label>
+    <input type="password" placeholder="Escreva a senha" name="psw" required>
+    <button type="submit" class="large-button">Login</button>
+   
+
+<div class="container" style="background-color:#f1f1f1">
+    <span class="psw">Esqueceu a<a href="#"> senha?</a></span> <br>
+    <span class="register">Ainda não tem conta? <a href="#">Registre-se</a></span>
+  </div>
+ <button type="button" style="width: 100.5%" class="cancelbtn">Cancelar</button>
+
+</div>
+				</div>
+			</div>
+		</div>	
+
+
+	</div>
+</div>
+<style>
+.register{
+
+
+}
+.cancelbtn {
+        
+    background-color: #f44336;
+     
+  border-radius: 0px 0px 10px 10px;
+
+ padding: 14px 20px;
+    margin-top:0px ;
+
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+    cursor: pointer;
+}
+
+.large-button {
+	width: 100.5%;
+  padding: 14px 20px;
+  margin: 30px -1px ;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
+    border-radius: 10px 10px 0px 0px;
+    min-height: 50px;
+}
+
+/* Extra style for the cancel button (red) */
+
+
+
+/* The "Forgot password" text */
+span.psw {
+  float: center;
+   padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+</style>
+
+
+</body>
+</html>
