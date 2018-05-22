@@ -27,8 +27,8 @@
 
 	.card{
 		background-color: #E0E0E0;
-		max-height: 230px;
-
+		max-height: 250px;
+		min-height: 250px;
 	}
 
 	.row{
@@ -37,9 +37,8 @@
 
 	.card-text {
 		margin-bottom: 50px;
-		min-height: 100px;
-		min-width: 100px;
-		max-height: 200px;
+		max-height: 110px;
+		min-height: 110px;
 	}
 
 	.card-title {
@@ -121,7 +120,8 @@
 							<img src=\"https://d2yb5xvaxbus4z.cloudfront.net/prod/shp_products/sp760fw/4d1a3694-49b4-402d-b225-1dd992e7ce8f/60c80d5c-fe90-4569-94e8-bfbfe6f0a615.jpg\" class=\"img-fluid\" width=\"110px\">
 								
 							<div class=\"card-text\">
-								Preço: R$ {$dados['Preco']}
+								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
+								<span style=\"color: red; font-weight: bold;\">Vendedor: </span>{$dados['Vendedor']}
 								<br>
 								<a style=\"margin-top: 10px;\" href=\"#\" class=\"btn btn-primary\">Ver mais</a>
 							</div>
