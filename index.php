@@ -1,5 +1,4 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<html lang="en">
 <head>
   <title>COMIDINHAS - EACH USP</title>
   <meta charset="utf-8">
@@ -98,28 +97,44 @@
 <div class="container">
 	<div class="row">
 
-		<?php 
-		function renderCard($nome, $img, $preco) {
-				echo("<div class=\"col-md-3 col-sm-6 p-3\">
-				<div class=\"card text-center\" > 
-					<div class=\"card-block box shadow\" >
-						<div class=\"card-title\"> 
-							<h4 class=\"card-title-text\">$nome</h4>
-						</div>
-						<img src=\"$img\" class=\"img-fluid\" width=\"110px\">
+		<?php
+		
+		function renderCards() {
+
+			$conn = new mysqli("localhost", "root", "", "coolsunday"); //Conexão com banco de dados estabelecida.
+			$sql = mysqli_query($conn,"SELECT * FROM produtos ORDER BY id DESC LIMIT 0, 1") or die (mysqli_error($conn)); //Seleciona todas as informações sobre o produto com o maior ID.
+			$dados = mysqli_fetch_array($sql); //Armazena todas as linhas do produto com o maior ID.
+			$linha =  $dados['id'];
+
+			while ($linha>0) {
+				$sql = mysqli_query($conn,"SELECT * FROM produtos WHERE id=$linha") or die (mysqli_error($conn)); //Começa as putaria.
+				$dados = mysqli_fetch_array($sql);
+				
+				if ($dados != null) { //Só renderiza se existir.
 						
-						<div class=\"card-text\">
-							Preço: R$ $preco,00
-							<br>
-							<a style=\"margin-top: 10px;\" href=\"#\" class=\"btn btn-primary\">Ver mais</a>
+					echo("<div class=\"col-md-3 col-sm-6 p-3\">
+					<div class=\"card text-center\" > 
+						<div class=\"card-block box shadow\" >
+							<div class=\"card-title\"> 
+								<h4 class=\"card-title-text\">{$dados['Nome']}</h4>
+							</div>
+							<img src=\"https://d2yb5xvaxbus4z.cloudfront.net/prod/shp_products/sp760fw/4d1a3694-49b4-402d-b225-1dd992e7ce8f/60c80d5c-fe90-4569-94e8-bfbfe6f0a615.jpg\" class=\"img-fluid\" width=\"110px\">
+								
+							<div class=\"card-text\">
+								Preço: R$ {$dados['Preco']}
+								<br>
+								<a style=\"margin-top: 10px;\" href=\"#\" class=\"btn btn-primary\">Ver mais</a>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>");
+				</div>");
+					
+				}
+				$linha--;
+			}
 		}
 
-		renderCard("Pururuca com Ketshup", "http://www.crispel.com.br/uProdutos/CdcPZJKTAP/CdcPZJKTAP_800_.jpg",7);
-		renderCard("Ameixa", "http://cozinhaadois.com.br/wp-content/uploads/2012/11/soufle.jpg",7);
+		renderCards(); //Essa invocação de método não deveria existir mas ela não machuca ninguém eu juro.
 
 		?>
 		
