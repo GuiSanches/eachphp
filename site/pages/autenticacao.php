@@ -1,0 +1,62 @@
+
+<html>
+<head>
+<title>Autenticação</title>
+
+<script type='text/javascript'>
+function loginsucessfully(){
+
+setTimeout(function() {window.open('indexlogado.php', '_parent')}, 5000); 
+}
+
+function loginfailed(){
+setTimeout(function() {window.open('../../index.php', '_parent')}, 6000); 
+
+}
+//setTimeout('window.location='../index.html'',5000);
+</script>
+
+
+
+</head>
+<body>
+
+
+
+<?php
+
+$db = new mysqli("localhost", "root","", "coolsunday") or die (mysqli_error($db));
+
+session_start();
+
+$login = $_POST['uname'];
+$senha = $_POST['psw'];	 
+	
+	
+
+	$sql = mysqli_query( $db, "SELECT * FROM vendedor WHERE usuario = '$login' AND senha = '$senha'") or die (mysql_error());
+	$dados = mysqli_fetch_array($sql);
+	$linha = mysqli_num_rows($sql);
+
+				
+	if($linha >0){
+		$_SESSION['login'] = $_POST['uname'];
+		$_SESSION['senha'] = $_POST['psw'];	
+    	$_SESSION['nome'] = $dados['nome'];	
+		
+echo "<script>loginsucessfully()</script>";
+		echo "Você foi autenticado com sucesso! Aguarde um instante...";
+	
+		
+		 
+	}else{
+	echo "Login ou senha inválidos! Aguarde um instante...";
+		echo"<script>loginfailed()</script>";
+	}
+	
+	  
+	?>
+	
+
+</body>
+</html>
