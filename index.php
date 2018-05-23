@@ -91,7 +91,7 @@
   </div>
 </nav>
 	<h1 style="color: white; font-family: 'Do Hyeon', sans-serif" align=left>
-		<span style="display:block; height: 30px;"> &emsp; Novo produto: <button type="button" class="btn btn-primary btn-sm" style="font-size: 12px" name="test">+</button></span>
+		<span style="display:block; height: 30px;"> &emsp; Novo produto: <a style="margin-top: 10px;" href="/eachphp/site/pages/cad_produtos.php" class="btn btn-primary">+</a></span>
 	</h1>
 <div class="container">
 	<div class="row">
