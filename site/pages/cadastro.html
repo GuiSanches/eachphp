@@ -26,46 +26,116 @@
 		background-image: url("../resources/bg.jpg");
 	}
 
-	.card{
-		background-color: #E0E0E0;
-		max-height: 250px;
-
-	}
 
 	.row{
   		margin-top: 30px;
 	}
 
-	.card-text {
-		margin-bottom: 50px;
-		min-height: 250px;
-		min-width: 250px;
-		max-height: 250px;
-	}
 
-	.card-title {
-		background-color: #fdb523;
-	}
-
-	.card-title-text {
-		font-family: 'Do Hyeon', sans-serif;
-	}
-
-	.shadow {
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+  .card{
+    background-color: #E0E0E0;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 30px;
+    margin-bottom: 150px;
+      border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
   }
+ 
 
-
-  
-}
 
 
 .img-fluid {  /* 50% 50% centers image in div */
   width: 100px;
   height: 100px;
+}
+
+.campo{
+  border-radius: 10px;
+  border-style: groove;
+   margin-left: 20px;
+  min-height: 50px;
+min-width: 300px
+
+}
+
+.campoe{
+  border-radius: 10px;
+  border-style: groove;
+  margin-left: 20px;
+   min-height: 50px;
+min-width: 300px
+}
+
+.buttons button{
+  width: 343px;
+  height: 60px;
+}
+
+.submitbtn{
+ // border-top-right-radius: 15px;
+ // border-top-left-radius: 15px;
+  border-style: none;
+  font-family: 'Do Hyeon', sans-serif;
+  background-color:  #41c300; 
+  transition: 1s;
+  margin-left: -2px;
+}
+.submitbtn:hover{
+background-color: #008b00; 
+transition: 1s;
+}
+
+.cancelbtn:hover{
+background-color: #B71C1C;
+transition: 1s;
+}
+
+
+.cancelbtn{
+  transition: 1s;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+     border-style: none;
+     margin-left:-2px;
+     font-family: 'Do Hyeon', sans-serif;
+  background-color:  #D32F2F;
+  margin-bottom: -2px;
+ 
+ }
+ .topo{
+  background-color: #fdb523;
+    border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+
+ }
+
+ .topo h1{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 30px;
+ }
+ .topo p{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 15px;
+ }
+.card form{
+    border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.card form b{
+  font-family: 'Do Hyeon', sans-serif;
+}
+.card form input{
+  font-family: 'Do Hyeon', sans-serif;
+}
+.title{
+  margin-left: 30px;
+  margin-top: 5px;
+
 }
 
 </style>
@@ -92,33 +162,44 @@
     </ul>
   </div>
 </nav>
-<div class="container">
-	<div class= "container">
-		<form action="action_page.php" style="border:1px solid #ccc">
-  <div class="container">
-    <h1 class="box">Cadastrar-se</h1>
-    <p>Preencha o formulário para criar uma conta.</p>
+
+
+
+          <div class="card" >                               
+
+<form  class="form" method="POST" action="cadastrar.php" style="border:1px solid #ccc">
+<div class="topo">
+    <h1 class="box text-center">Cadastrar-se</h1>
+    <p class="text-center">Preencha o formulário para criar uma conta.</p>
     <hr>
-<ul>
-    <li><label for="email"><b>E-mail</b></label></li>
-    <input type="text" placeholder="Insira Email" name="e-mail" required>
+</div>
 
-    <li><label for="psw"><b>Senha</b></label></li>
-    <input type="password" placeholder="Senha" name="psw" required>
-
-    <li><label for="psw-repeat"><b>Repita a senha</b></label></li>
-    <input type="password" placeholder="Repita a senha" name="psw-repeat" required>
-    <li><label for="cpf"><b>CPF</b></label></li>
-    <input type="cpf" placeholder="CPF" name="cpf" required>
-
-    <div class="clearfix">
-    	<button type="submit" class="signupbtn">Enviar</button>
-    	<button type="button" class="cancelbtn">Cancelar</button>
+  <label for="name" class="title"><b>Nome</b></label><br>
+    <input type="text" class="campo" placeholder="Insira seu nome" name="uname" required><br>
+       <label for="user" class="title"><b>Usuário</b></label><br>
+    <input type="user" class="campoe" placeholder="usuario" name="user" required><br>
+    <label for="psw" class="title"><b>Senha</b></label><br>
+    <input type="password"class="campo" placeholder="Senha" name="psw" required><br>
+    <label for="psw-repeat" class="title"><b>Repita a senha</b></label><br>
+    <input type="password" class="campo" placeholder="Repita a senha" name="psw-repeat" required><br>
+ 
+<br><br>
+    <div class="buttons text-center">
+      <button type="submit" class="submitbtn">Enviar</button> <br>
+      <button type="button" class="cancelbtn">Cancelar</button>
       
     </div>
-  </div>
+
+
 </form>
-	</div>
-</div>
+
+              </div>
+        
+       
+ 
+
+		
+
+
 </body>
 </html>
