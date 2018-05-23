@@ -102,12 +102,14 @@
 
 			$conn = new mysqli("localhost", "root", "", "coolsunday"); //Conexão com banco de dados estabelecida.
 			$sql = mysqli_query($conn,"SELECT * FROM produtos ORDER BY id DESC LIMIT 0, 1") or die (mysqli_error($conn)); //Seleciona todas as informações sobre o produto com o maior ID.
+			mysqli_set_charset($conn,"utf8"); 
 			$dados = mysqli_fetch_array($sql); //Armazena todas as linhas do produto com o maior ID.
 			$linha =  $dados['id'];
 
 			while ($linha>0) {
 				$sql = mysqli_query($conn,"SELECT * FROM produtos WHERE id=$linha") or die (mysqli_error($conn)); //Começa as putaria.
 				$dados = mysqli_fetch_array($sql);
+
 				
 				if ($dados != null) { //Só renderiza se existir.
 						
@@ -135,7 +137,7 @@
 		}
 
 		renderCards(); //Essa invocação de método não deveria existir mas ela não machuca ninguém eu juro.
-
+		echo ("esse é um teste");
 		?>
 		
 	</div>
