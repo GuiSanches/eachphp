@@ -111,7 +111,7 @@
 				$dados = mysqli_fetch_array($sql);
 
 				
-				if ($dados != null) { //Só renderiza se existir.
+				if ($dados != null && $dados['Aprovado'] == true) {
 						
 					echo("<div class=\"col-md-3 col-sm-6 p-3\">
 					<div class=\"card text-center\" > 
@@ -125,7 +125,9 @@
 								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
 								<span style=\"color: red; font-weight: bold;\">Vendedor: </span>{$dados['Vendedor']}
 								<br>
-								<a style=\"margin-top: 10px;\" href=\"#\" class=\"btn btn-primary\">Ver mais</a>
+								<form action=\"site/pages/desc.php\" method=\"post\">
+									<a style=\"margin-top: 10px;\" href=\"site/pages/desc.php?id={$dados['id']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\">Ver mais</a>
+								</form>
 							</div>
 						</div>
 					</div>

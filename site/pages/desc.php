@@ -54,6 +54,10 @@
 	.card-title-text {
 		font-family: 'Do Hyeon', sans-serif;
 	}
+
+	h1 {
+		color: #fdb523;
+	}
 }
 
 .img-fluid {  /* 50% 50% centers image in div */
@@ -72,28 +76,33 @@
    
   </div>
 </nav>
-<?php
-
-$link = mysqli_connect("localhost", "root", "", "coolsunday");
-
-if($link === false){
-    die("Um erro interno inesperado aconteceu. " . mysqli_connect_error());
-}
-mysqli_set_charset($link,"utf8"); 
-
-$nome = mysqli_real_escape_string($link, $_REQUEST['nome']);
-$preco = mysqli_real_escape_string($link, $_REQUEST['preco']);
-$desc = mysqli_real_escape_string($link, $_REQUEST['desc']);
-
-
-$sql = "insert into produtos (id, Nome, Preco, Vendedor, Descricao, Aprovado) values (default, '$nome', '$preco', \"Wilson\", '$desc',1);";
-if(mysqli_query($link, $sql)){
-    echo "<br><br><center><h1>Adicionado!</h1></center>";
-} else{
-    echo "Alguma entrada incorreta foi inserida. Tente novamente mais tarde. " . mysqli_error($link);
-}
-
-mysqli_close($link);
-?>
 <br><br>
-<center><a style="margin-top: 10px;" href="/eachphp/index.php" class="btn btn-primary"><h3>Voltar para o início</h3></a></center>
+<?php
+	$link = mysqli_connect("localhost", "root", "", "coolsunday");
+
+	if($link === false){
+    die("Um erro interno inesperado aconteceu. " . mysqli_connect_error());
+	}
+
+	mysqli_set_charset($link,"utf8"); 
+
+	$id = mysqli_real_escape_string($link, $_REQUEST['id']);
+	
+	$sql = mysqli_query($link, "SELECT * FROM produtos WHERE id=$id;");
+	$dados = mysqli_fetch_array($sql);
+	
+	echo("<center>
+	<h1>Nome:</h1>
+	<h3>{$dados['Nome']}</h3><br>
+
+	<h1>Preço:</h1>
+	<h3>R$ {$dados['Preco']}</h3><br>
+
+	<h1>Descrição:</h1><br>
+	<h3>{$dados['Descricao']}</h3><br>
+</center>
+
+
+	");
+
+?>
