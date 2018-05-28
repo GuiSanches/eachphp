@@ -73,7 +73,7 @@
 <br>
 <br>
 <center>
-		<form action="insert.php" method="post" accept-charset="UTF-8">
+		<form action="insert.php" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
     <p>
         <label for="nome">Nome do produto:</label><br>
         <input type="text" name="nome" id="nome">
@@ -88,6 +88,10 @@
         <label for="desc">Descrição rápida:</label><br>
         <textarea rows="4" cols="50" type="text" name="desc" id="desc" accept-charset="UTF-8"></textarea> 
     </p>
+    <input type="hidden" name="size" value="1000000">
+    <div>
+      <input type="file" name="image">
+    </div>
     <br>
     <input type="submit" value="Enviar">
 </form>

@@ -119,7 +119,7 @@
 							<div class=\"card-title\"> 
 								<h4 class=\"card-title-text\">{$dados['Nome']}</h4>
 							</div>
-							<img src=\"https://d2yb5xvaxbus4z.cloudfront.net/prod/shp_products/sp760fw/4d1a3694-49b4-402d-b225-1dd992e7ce8f/60c80d5c-fe90-4569-94e8-bfbfe6f0a615.jpg\" class=\"img-fluid\" width=\"110px\">
+							<img src=\"site/pages/produtos/{$dados['Imagem']}\" class=\"img-fluid\" width=\"110px\">
 								
 							<div class=\"card-text\">
 								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
