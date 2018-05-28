@@ -139,7 +139,6 @@
 		}
 
 		renderCards(); //Essa invocação de método não deveria existir mas ela não machuca ninguém eu juro.
-		echo ("esse é um teste");
 		?>
 		
 	</div>
