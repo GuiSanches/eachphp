@@ -85,18 +85,16 @@ $nome = mysqli_real_escape_string($link, $_REQUEST['nome']);
 $preco = mysqli_real_escape_string($link, $_REQUEST['preco']);
 $desc = mysqli_real_escape_string($link, $_REQUEST['desc']);
 
-$image = $_FILES['image']['name'];
-$target = "produtos/".basename($image);
+$sql = "insert into produtos (id, Nome, Preco, Vendedor, Descricao, Aprovado) values (default, '$nome', '$preco', \"Wilson\", '$desc',1);";
 
-
-
-$sql = "insert into produtos (id, Nome, Imagem, Preco, Vendedor, Descricao, Aprovado) values (default, '$nome', '$image', '$preco', \"Wilson\", '$desc',1);";
 if(mysqli_query($link, $sql)){
-	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-      $msg = "Image uploaded successfully";
-    }else{
-      $msg = "Failed to upload image";
-    }
+
+	$sql = mysqli_query($link,"SELECT * FROM produtos ORDER BY id DESC LIMIT 0, 1") or die (mysqli_error($link));
+	$dados = mysqli_fetch_array($sql);
+	$target = "produtos/".$dados['id'].".jpg";
+
+	move_uploaded_file($_FILES['image']['tmp_name'], $target);
+    
     echo "<br><br><center><h1>Adicionado!</h1></center>";
 } else{
     echo "Alguma entrada incorreta foi inserida. Tente novamente mais tarde. " . mysqli_error($link);

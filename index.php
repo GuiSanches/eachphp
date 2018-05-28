@@ -119,7 +119,7 @@
 							<div class=\"card-title\"> 
 								<h4 class=\"card-title-text\">{$dados['Nome']}</h4>
 							</div>
-							<img src=\"site/pages/produtos/{$dados['Imagem']}\" class=\"img-fluid\" width=\"110px\">
+							<img src=\"site/pages/produtos/{$dados['id']}\" class=\"img-fluid\" width=\"110px\">
 								
 							<div class=\"card-text\">
 								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
