@@ -1,4 +1,15 @@
 # Importante! Comidinhas EACH - PHP Edition BETA.
+Aqui estão reunidas instruções para começar a utilizar o repositório e programar no projeto de Fundamentos de Sistemas de Informação da turma 2018 de SI na USP Leste.
+
+## Instalando e usando o WampServer
+Faça o download aqui:
+```
+http://www.wampserver.com/en/
+
+```
+e instale normalmente.
+
+Após concluir a instalação, inicie o programa e aguarde até que o ícone dele esteja verde na barra de tarefas. Qaundo estiver, lembre-se de clicar com o botão direito no ícone e alterar a versão do PHP para 7.2.4.
 
 ## Criação do banco de dados
 
@@ -11,7 +22,6 @@ Este comando cria o banco de dados.
 create database coolsunday
 default character set utf8
 default collate utf8_general_ci;
-
 ```
 
 ### Tabela de vendedores (para o Login/Cadastro)
@@ -25,7 +35,6 @@ senha varchar(50),
 nome varchar(50)
 );
 ```
-
 ### Tabela para produtos
 Aqui é armazenado os produtos que serão listados na página inicial.
 
@@ -40,5 +49,13 @@ Aprovado boolean not null default 1
 );
 ```
 
-E só (por enquanto).
+## Testar o projeto
+Para testar o site, clone o repositório no endereço abaixo ou similar:
+```
+C:\wamp64\www
+```
 
+e acesse o site pelo endereço:
+```
+http://localhost/eachphp/index.php
+```
