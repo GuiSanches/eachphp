@@ -25,23 +25,10 @@
 
 	body {
 		background-image: url("../resources/bg.jpg");
-		color: white;
+		color: black;
 	}
-
 	.card{
 		background-color: #E0E0E0;
-		max-height: 250px;
-		min-height: 250px;
-	}
-
-	.row{
-  		margin-top: 30px;
-	}
-
-	.card-text {
-		margin-bottom: 50px;
-		max-height: 110px;
-		min-height: 110px;
 	}
 
 	.card-title {
@@ -50,13 +37,10 @@
 
 	.card-title-text {
 		font-family: 'Do Hyeon', sans-serif;
+		font-size: 32px;
 	}
 }
 
-.img-fluid {  /* 50% 50% centers image in div */
-  width: 100px;
-  height: 100px;
-}
 
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark">
@@ -65,38 +49,50 @@
   <a class="navbar-brand mr-auto" href="#"><img src="../resources/logo.png" width="110px" align="center"></a>
   
   <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo01">
- 
-   
-  </div>
+ </div>
 </nav>
 	
 <br>
 <br>
-<center>
-		<form action="insert.php" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
-    <p>
-        <label for="nome">Nome do produto:</label><br>
-        <input type="text" name="nome" id="nome">
-    </p>
-    <br>
-    <p>
-        <label for="preco">Preço: R$</label><br>
-        <input type="text" name="preco" id="preco">
-    </p>
-    <br>
-    <p>
-        <label for="desc">Descrição rápida:</label><br>
-        <textarea rows="4" cols="50" type="text" name="desc" id="desc" accept-charset="UTF-8"></textarea> 
-    </p>
-    <input type="hidden" name="size" value="1000000">
-    <div>
-      <input type="file" name="image">
-    </div>
-    <br>
-    <input type="submit" value="Enviar">
-</form>
-		<a style="margin-top: 10px;" href="/eachphp/index.php" class="btn btn-primary">Voltar</a>
 
+<center>
+	<div class="col-md-5 col-sm-6 p-8">
+					<div class="card text-center" > 
+						<div class="card-block box shadow" >
+							<div class="card-title"> 
+								<h4 class="card-title-text">Cadastrar produto!</h4>
+							</div>
+							<div class="card-text">
+								<form action="insert.php" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+									    <p>
+									        <label for="nome">Nome do produto:</label><br>
+									        <input type="text" name="nome" id="nome">
+									    </p>
+									    
+									    <p>
+									        <label for="preco">Preço: R$</label><br>
+									        <input type="text" name="preco" id="preco"><br>
+									        <p style="font-size: 12px; color: red;">Nota: Insira "." (ponto) ao invés de "," (vírgula).</p>
+									    </p>
+									    
+									    <p>
+									        <label for="desc">Descrição rápida:</label><br>
+									        <textarea rows="4" cols="50" type="text" name="desc" id="desc" accept-charset="UTF-8"></textarea> 
+									    </p>
+									    Upload de imagem:<br><br>
+									    <input type="hidden" name="size" value="1000000">
+									    <div>
+									      <input type="file" name="image">
+									    </div>
+									    <br>
+									    <input type="submit" value="Enviar">
+								</form>
+									<a style="margin-top: 10px;" href="/eachphp/index.php" class="btn btn-primary">Voltar</a><br><br>		
+							</div>
+						</div>
+					</div>
+				</div>
+				<br>
 </center>
 
 </body>
