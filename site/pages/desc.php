@@ -28,13 +28,12 @@
 
 	body {
 		background-image: url("../resources/bg.jpg");
-		color: white;
+		color: black;
 	}
 
 	.card{
 		background-color: #E0E0E0;
-		max-height: 250px;
-		min-height: 250px;
+		
 	}
 
 	.row{
@@ -42,9 +41,8 @@
 	}
 
 	.card-text {
-		margin-bottom: 50px;
-		max-height: 110px;
-		min-height: 110px;
+		margin-bottom: 110px;
+		font-size: 170%;
 	}
 
 	.card-title {
@@ -55,14 +53,22 @@
 		font-family: 'Do Hyeon', sans-serif;
 	}
 
-	h1 {
-		color: #fdb523;
-	}
 }
 
 .img-fluid {  /* 50% 50% centers image in div */
   width: 100px;
   height: 100px;
+  margin-top: 100px;
+}
+
+h1 {
+	color: white;
+	margin-bottom: -10px;
+}
+
+h5 {
+	color: white;
+	margin-bottom: 20px;
 }
 
 </style>
@@ -88,7 +94,8 @@
     </ul>
   </div>
 </nav>
-<br><br>
+<br>
+
 <?php
 	$link = mysqli_connect("localhost", "root", "", "coolsunday");
 
@@ -102,19 +109,25 @@
 	
 	$sql = mysqli_query($link, "SELECT * FROM produtos WHERE id=$id;");
 	$dados = mysqli_fetch_array($sql);
-	
-	echo("<center>
-	<h1>Nome:</h1>
-	<h3>{$dados['Nome']}</h3><br>
-
-	<h1>Preço:</h1>
-	<h3>R$ {$dados['Preco']}</h3><br>
-
-	<h1>Descrição:</h1><br>
-	<h3>{$dados['Descricao']}</h3><br>
-</center>
-
-
-	");
-
+	echo("<center><div class=\"col-md-8 col-sm-8 p-3\">
+					<div class=\"card text-center\" > 
+						<div class=\"card-block box shadow\" >
+							<div class=\"card-title\"> 
+								<h1 class=\"card-title-text\">{$dados['Nome']}<h5>(de {$dados['Vendedor']})</h5></h1>
+							</div>
+							<img src=\"/eachphp/site/pages/produtos/{$dados['id']}\" class=\"img-fluid\" style=\"width: 30%;\">
+								
+							<div class=\"card-text\">
+								
+								<span style=\"color: #fdb523; font-weight: bold;\">Descrição rápida: </span><br>{$dados['Descricao']}<br><br>
+								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
+								<span style=\"color: blue; font-weight: bold;\">Local: </span><br>
+								<span style=\"color: red; font-weight: bold;\">Vendedor: </span>{$dados['Vendedor']}
+								<br><br>
+							</div>
+						</div>
+					</div>
+				</div>
+				</center>");
 ?>
+
