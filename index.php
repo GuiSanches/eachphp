@@ -1,4 +1,15 @@
 ﻿<html lang="en">
+<?php
+	if (!isset($_SESSION)){
+	
+		session_start();     
+	
+		    if (isset($_SESSION['login'])) {
+		    	$login = $_SESSION['nome'];
+		    }
+      }
+
+ ?>
 <head>
   <title>COMIDINHAS - EACH USP</title>
   <meta charset="utf-8">
@@ -73,26 +84,45 @@
   <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     
-  </button><a class="navbar-brand mr-auto" href="#"><img src="site/resources/logo.png" width="110px"></a>
+  </button><a class="navbar-brand mr-auto" href="#"><img src="/eachphp/site/resources/logo.png" width="110px"></a>
   
   <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo01">
  
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Produtos<span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="/eachphp/index.php">Produtos<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="site/pages/sobre.html">Sobre</a>
+        <a class="nav-link" href="/eachphp/site/pages/sobre.php">Sobre</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="site/pages/login.html">Entrar</a>
-      </li>
+		<?php 
+		if (isset($_SESSION['login'])) {
+			echo("<a class=\"nav-link\" href=\"#\">{$login}</a>");
+			echo("<li class=\"nav-item\">
+        			<a class=\"nav-link\" href=\"/eachphp/site/pages/logout.php\">Sair</a>
+      			</li></li>");
+		} else {
+			echo("<a class=\"nav-link\" href=\"/eachphp/site/pages/login.html\">Entrar</a></li>");
+		}
+		?>
     </ul>
   </div>
 </nav>
-	<h1 style="color: white; font-family: 'Do Hyeon', sans-serif" align=left>
-		<span style="display:block; height: 30px;"> &emsp; Novo produto: <a style="margin-top: 10px;" href="/eachphp/site/pages/cad_produtos.php" class="btn btn-primary">+</a></span>
-	</h1>
+<br>
+<?php 
+
+if (isset($_SESSION['login'])) {
+	echo("<h1 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left>
+				<span style=\"display:block; height: 30px;\"> &emsp; Novo produto: <a style=\"margin-top: 10px;\" href=\"/eachphp/site/pages/cad_produtos.php\" class=\"btn btn-primary\">+</a></span>
+			</h1>");
+	} else {
+		echo("<h3 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left>
+				<span style=\"display:block; height: 30px;\">&emsp;&emsp;Dica: Inicie sessão para adicionar seu produto!</span>
+			</h3>");
+	}
+
+?>
 <div class="container">
 	<div class="row">
 

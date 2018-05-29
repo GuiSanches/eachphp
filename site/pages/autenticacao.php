@@ -6,7 +6,7 @@
 <script type='text/javascript'>
 function loginsucessfully(){
 
-setTimeout(function() {window.open('indexlogado.php', '_parent')}, 5000); 
+setTimeout(function() {window.open('/eachphp/index.php', '_parent')}, 5000); 
 }
 
 function loginfailed(){
@@ -31,8 +31,6 @@ session_start();
 
 $login = $_POST['uname'];
 $senha = $_POST['psw'];	 
-	
-	
 
 	$sql = mysqli_query( $db, "SELECT * FROM vendedor WHERE usuario = '$login' AND senha = '$senha'") or die (mysql_error());
 	$dados = mysqli_fetch_array($sql);
@@ -40,8 +38,8 @@ $senha = $_POST['psw'];
 
 				
 	if($linha >0){
-		$_SESSION['login'] = $_POST['uname'];
-		$_SESSION['senha'] = $_POST['psw'];	
+		$_SESSION['login'] = $login;
+		$_SESSION['senha'] = $senha;	
     	$_SESSION['nome'] = $dados['nome'];	
 		
 echo "<script>loginsucessfully()</script>";
