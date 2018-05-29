@@ -44,7 +44,7 @@ id int(11) auto_increment primary key,
 Nome varchar(25),
 Preco decimal(4,2),
 Vendedor varchar(30),
-Descricao varchar(200),
+Descricao varchar(600),
 Aprovado boolean not null default 1
 );
 ```
