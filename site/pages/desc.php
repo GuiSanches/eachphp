@@ -129,7 +129,8 @@ h5 {
 	
 	$sql = mysqli_query($link, "SELECT * FROM produtos WHERE id=$id;");
 	$dados = mysqli_fetch_array($sql);
-	echo("<center><div class=\"col-md-8 col-sm-8 p-3\">
+	echo("<center>
+		<div class=\"col-md-8 col-sm-8 p-3\">
 					<div class=\"card text-center\" > 
 						<div class=\"card-block box shadow\" >
 							<div class=\"card-title\"> 
@@ -142,12 +143,14 @@ h5 {
 								<span style=\"color: #fdb523; font-weight: bold;\">Descrição rápida: </span><br>{$dados['Descricao']}<br><br>
 								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
 								<span style=\"color: blue; font-weight: bold;\">Local: </span><br>
-								<span style=\"color: red; font-weight: bold;\">Vendedor: </span>{$dados['Vendedor']}
+								<span style=\"color: red; font-weight: bold;\">Vendedor: </span>{$dados['Vendedor']}<br>
+								<a style=\"margin-top: 10px;\" href=\"/eachphp/index.php\" name=\"id\" id=\"id\" class=\"btn btn-primary\"><span style=\"font-size: 20px;\">Voltar</span></a>
 								<br><br>
 							</div>
 						</div>
 					</div>
 				</div>
+				
 				</center>");
 ?>
 
