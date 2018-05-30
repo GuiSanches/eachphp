@@ -30,7 +30,7 @@
       <li class="nav-item">
 		<?php 
 		if (isset($_SESSION['login'])) {
-			echo("<a class=\"nav-link\" href=\"#\">{$login}</a>");
+			echo("<a class=\"nav-link\" href=\"/eachphp/site/pages/productsby.php?vend={$login}\">{$login}</a>");
 			echo("<li class=\"nav-item\">
         			<a class=\"nav-link\" href=\"/eachphp/site/pages/logout.php\">Sair</a>
       			</li></li>");

@@ -29,10 +29,15 @@
 <br>
 <?php 
 	$conn = new mysqli("localhost", "root", "", "coolsunday"); //Conexão com banco de dados estabelecida.
-	$vend = mysqli_real_escape_string($conn, $_REQUEST['vend']); ?>
-<br>
-<h3 style="color: white; font-family: 'Do Hyeon', sans-serif" align=left><span style="display:block; height: 30px;">&emsp;&emsp;Produtos por: <?php echo("{$vend}")?></span></h3>
+	$vend = mysqli_real_escape_string($conn, $_REQUEST['vend']); 
 
+	if ($login != $vend) {
+		echo("<h3 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left><span style=\"display:block; height: 30px;\">&emsp;&emsp;Produtos por: {$vend}</span></h3>");
+	} else {
+		echo("<h3 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left><span style=\"display:block; height: 30px;\">&emsp;&emsp;Meus produtos</span></h3>");
+	}
+
+?>
 
 <div class="container">
 	<div class="row">
