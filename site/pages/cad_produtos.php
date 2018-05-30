@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
 	$desc = mysqli_real_escape_string($link, $_REQUEST['desc']);
 	$vendedor = $_SESSION['nome'];
 
-	$sql = "insert into produtos (id, Nome, Preco, Vendedor, Descricao, Aprovado) values (default, '$nome', '$preco', '$vendedor', '$desc',1);";
+	$sql = "insert into produtos (id, Nome, Preco, Vendedor, Descricao, Aprovado) values (default, '$nome', '$preco', '$vendedor', '$desc',default);";
 
 	if(mysqli_query($link, $sql)){
 
