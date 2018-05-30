@@ -136,7 +136,7 @@ h5 {
 							<div class=\"card-title\"> 
 								<h1 class=\"card-title-text\">{$dados['Nome']}<h5>(de {$dados['Vendedor']})</h5></h1>
 							</div>
-							<img src=\"/eachphp/site/pages/produtos/{$dados['id']}\" class=\"img-fluid\" style=\"width: 30%;\">
+							<img src=\"/eachphp/site/pages/produtos/{$dados['id']}.jpg\" class=\"img-fluid\" style=\"width: 30%;\">
 								
 							<div class=\"card-text\">
 								
