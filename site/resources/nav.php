@@ -1,13 +1,18 @@
 <?php
+  $color = "#fdb523";
 	if (!isset($_SESSION)){
 		session_start();     
 		    if (isset($_SESSION['login'])) {
 		    	$login = $_SESSION['nome'];
+          if ($_SESSION['color'] != "#ffffff") {
+            $color = $_SESSION['color'];
+          }
+          
 		    }
       }
  ?>
 
- <nav class="navbar navbar-expand-lg navbar-dark">
+ <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: <?php echo($color) ?> !important;">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">

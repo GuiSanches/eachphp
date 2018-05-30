@@ -41,6 +41,7 @@ $senha = $_POST['psw'];
 		$_SESSION['login'] = $login;
 		$_SESSION['senha'] = $senha;	
     	$_SESSION['nome'] = $dados['nome'];	
+    	$_SESSION['color'] = $dados['cor'];
 		
 echo "<script>loginsucessfully()</script>";
 		echo "Você foi autenticado com sucesso! Aguarde um instante...";

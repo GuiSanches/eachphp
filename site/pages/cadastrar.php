@@ -5,6 +5,7 @@ $conn = new mysqli("localhost", "root", "", "coolsunday");
 $nome = $_POST['uname'];
 $usuario = $_POST['user'];
 $senha = $_POST['psw'];
+$cor = $_POST['color'];
 //$senha2 = $_POST['psw-repeat'];
 
 //$sql_email_check = mysqli_query($conn,"SELECT COUNT(id) FROM vendedor WHERE email='{$usuario}'");
@@ -32,7 +33,7 @@ voltar();
 		
 }else{		
 
-$sql = mysqli_query($conn, "INSERT INTO vendedor (nome,usuario,senha) values ('$nome','$usuario','$senha')");
+$sql = mysqli_query($conn, "INSERT INTO vendedor (id,nome,usuario,senha,cor) values (default,'$nome','$usuario','$senha','$cor')");
 
 if ($sql) { 
 			echo"
