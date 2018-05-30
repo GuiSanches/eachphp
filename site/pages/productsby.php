@@ -76,7 +76,7 @@
 						</div>
 					</div>
 				</div>");
-				} else if ($dados != null && $dados['Aprovado'] == true && $dados['Vendedor'] == $vend && $dados['Vendedor'] == $_SESSION['nome']) {
+				} else if ($dados != null && $dados['Vendedor'] == $vend && $dados['Vendedor'] == $_SESSION['nome']) {
 						
 					echo("<div class=\"col-md-3 col-sm-6 p-3\">
 					<div class=\"card text-center\" > 
