@@ -1,15 +1,4 @@
 ﻿<!DOCTYPE html>
-<?php
-	if (!isset($_SESSION)){
-	
-		session_start();     
-	
-		    if (isset($_SESSION['login'])) {
-		    	$login = $_SESSION['nome'];
-		    }
-      }
-
- ?>
 <html lang="en">
 <head>
   <title>COMIDINHAS - EACH USP</title>

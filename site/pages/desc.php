@@ -1,15 +1,4 @@
  <html lang=”pt-br”>
- <?php
-	if (!isset($_SESSION)){
-	
-		session_start();     
-	
-		    if (isset($_SESSION['login'])) {
-		    	$login = $_SESSION['nome'];
-		    }
-      }
-
- ?>
  <meta charset=”UTF-8”>
  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
  <html lang=”pt-br”>
