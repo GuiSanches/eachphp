@@ -16,90 +16,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="/eachphp/site/pages/css/sobre.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
-<style>
-	
-	@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
-	
-
-	.navbar-dark {
-		background-color: #fdb523;
-		font-family: 'Do Hyeon', sans-serif;
-		color: green;
-		font-size: 25px;
-	}
-
-	h1 {
-		font-family: 'Do Hyeon', sans-serif;
-		color: white;
-	}
-
-	h5 {
-		color: white;
-	}
 
 
-	body {
-		background-image: url("../resources/bg.jpg");
-	}
-
-	.card{
-		background-color: #E0E0E0;
-		max-height: 250px;
-
-	}
-
-	.row{
-  		margin-top: 30px;
-	}
-
-	.card-text {
-		margin-bottom: 50px;
-		min-height: 250px;
-		min-width: 250px;
-		max-height: 250px;
-	}
-
-	.card-title {
-		background-color: #fdb523;
-	}
-
-	.card-title-text {
-		font-family: 'Do Hyeon', sans-serif;
-	}
-	.list-group {
-		margin-left: 50px;
-		margin-right: 50px;
-	}
-
-	.active {
-		background-color: #fdb523 !important;
-		border: none;
-		color: black !important; 
-		font-family: 'Do Hyeon', sans-serif;
-	}
-
-	.shadow {
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
-  }
-
-
-  
-}
-
-
-.img-fluid {  /* 50% 50% centers image in div */
-  width: 100px;
-  height: 100px;
-}
-
-</style>
 <div id="nav-placeholder"> </div>
 	<script>
 	$(function(){

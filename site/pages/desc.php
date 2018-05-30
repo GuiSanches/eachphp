@@ -20,69 +20,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="/eachphp/site/pages/css/desc.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
-<style>
-	
-	@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
-	
-
-	.navbar-dark {
-		background-color: #fdb523;
-		font-family: 'Do Hyeon', sans-serif;
-		color: green;
-		font-size: 25px;
-	}
-
-
-	body {
-		background-image: url("../resources/bg.jpg");
-		color: black;
-	}
-
-	.card{
-		background-color: #E0E0E0;
-		
-	}
-
-	.row{
-  		margin-top: 30px;
-	}
-
-	.card-text {
-		margin-bottom: 110px;
-		font-size: 170%;
-	}
-
-	.card-title {
-		background-color: #fdb523;
-	}
-
-	.card-title-text {
-		font-family: 'Do Hyeon', sans-serif;
-	}
-
-}
-
-.img-fluid {  /* 50% 50% centers image in div */
-  width: 100px;
-  height: 100px;
-  margin-top: 100px;
-}
-
-h1 {
-	color: white;
-	margin-bottom: -10px;
-}
-
-h5 {
-	color: white;
-	margin-bottom: 20px;
-}
-
-</style>
 <div id="nav-placeholder"> </div>
 	<script>
 	$(function(){

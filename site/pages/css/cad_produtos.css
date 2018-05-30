@@ -1,0 +1,26 @@
+	@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+	
+	.navbar-dark {
+		background-color: #fdb523;
+		font-family: 'Do Hyeon', sans-serif;
+		color: green;
+		font-size: 25px;
+	}
+
+	body {
+		background-image: url("/eachphp/site/resources/bg.jpg");
+		color: black;
+	}
+	.card{
+		background-color: #E0E0E0;
+	}
+
+	.card-title {
+		background-color: #fdb523;
+	}
+
+	.card-title-text {
+		font-family: 'Do Hyeon', sans-serif;
+		font-size: 32px;
+	}
+}

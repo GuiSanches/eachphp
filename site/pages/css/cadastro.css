@@ -1,0 +1,123 @@
+	
+	@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+	
+
+	.navbar-dark {
+		background-color: #fdb523;
+		font-family: 'Do Hyeon', sans-serif;
+		color: green;
+		font-size: 25px;
+	}
+
+
+	body {
+		background-image: url("/eachphp/site/resources/bg.jpg");
+	}
+
+
+	.row{
+  		margin-top: 30px;
+	}
+
+
+  .card{
+    background-color: #E0E0E0;
+      border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;]
+  }
+
+.img-fluid {  /* 50% 50% centers image in div */
+  width: 100px;
+  height: 100px;
+}
+
+.campo{
+  border-radius: 10px;
+  border-style: groove;
+  margin-left: 20px;
+  min-height: 50px;
+
+min-width: 80%;
+
+}
+
+.campoe{
+  border-radius: 10px;
+  border-style: groove;
+  margin-left: 20px;
+  min-height: 50px;
+  min-width: 80%;
+}
+
+.buttons button{
+  width: 100.5%;
+  height: 60px;
+}
+
+.submitbtn{
+ // border-top-right-radius: 15px;
+ // border-top-left-radius: 15px;
+  border-style: none;
+  font-family: 'Do Hyeon', sans-serif;
+  background-color:  #4CAF50; 
+  transition: 1s;
+  margin-left: -1px;
+}
+.submitbtn:hover{
+//background-color: #008b00; 
+ opacity: 0.8;
+transition: 1s;
+}
+
+.cancelbtn:hover{
+//background-color: #B71C1C;
+ opacity: 0.8;
+transition: 1s;
+}
+
+
+.cancelbtn{
+  transition: 1s;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+     border-style: none;
+     margin-left:-1px;
+     font-family: 'Do Hyeon', sans-serif;
+  background-color:  #f44336;
+  margin-bottom: -2px;
+ 
+ }
+ .topo{
+  background-color: #fdb523;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+
+ }
+
+ .topo h1{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 30px;
+ }
+ .topo p{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 15px;
+ }
+.card form{
+    border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.card form b{
+  font-family: 'Do Hyeon', sans-serif;
+}
+.card form input{
+  font-family: 'Do Hyeon', sans-serif;
+}
+.title{
+  margin-left: 30px;
+  margin-top: 5px;
+
+}

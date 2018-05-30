@@ -17,43 +17,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="/eachphp/site/pages/css/cad_produtos.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
-<style>
-	
-	@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
-	
 
-	.navbar-dark {
-		background-color: #fdb523;
-		font-family: 'Do Hyeon', sans-serif;
-		color: green;
-		font-size: 25px;
-	}
-
-
-	body {
-		background-image: url("../resources/bg.jpg");
-		color: black;
-	}
-	.card{
-		background-color: #E0E0E0;
-	}
-
-	.card-title {
-		background-color: #fdb523;
-	}
-
-	.card-title-text {
-		font-family: 'Do Hyeon', sans-serif;
-		font-size: 32px;
-	}
-}
-
-
-</style>
 <div id="nav-placeholder"> </div>
 	<script>
 	$(function(){
