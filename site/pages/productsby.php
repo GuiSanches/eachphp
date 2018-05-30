@@ -14,7 +14,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
- <link rel="stylesheet" type="text/css" href="/eachphp/site/pages/css/productsby.css">
+ <link rel="stylesheet" type="text/css" href="css/productsby.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -23,7 +23,7 @@
 <div id="nav-placeholder"> </div>
 	<script>
 	$(function(){
-	  $("#nav-placeholder").load("/eachphp/site/resources/nav.php");
+	  $("#nav-placeholder").load("../resources/nav.php");
 	});
 	</script>
 <br>
@@ -63,14 +63,14 @@
 							<div class=\"card-title\"> 
 								<h4 class=\"card-title-text\">{$dados['Nome']}</h4>
 							</div>
-							<img src=\"/eachphp/site/pages/produtos/{$dados['id']}.jpg\" class=\"img-fluid\" width=\"110px\">
+							<img src=\"produtos/{$dados['id']}.jpg\" class=\"img-fluid\" width=\"110px\">
 								
 							<div class=\"card-text\">
 								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
-								<span style=\"color: red; font-weight: bold;\">Vendedor: </span><a href=\"/eachphp/site/pages/productsby.php?vend={$dados['Vendedor']}\">{$dados['Vendedor']}</a>
+								<span style=\"color: red; font-weight: bold;\">Vendedor: </span><a href=\"productsby.php?vend={$dados['Vendedor']}\">{$dados['Vendedor']}</a>
 								<br>
-								<form action=\"/eachphp/site/pages/desc.php\" method=\"post\">
-									<a style=\"margin-top: 10px;\" href=\"/eachphp/site/pages/desc.php?id={$dados['id']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\">Ver mais</a>
+								<form action=\"desc.php\" method=\"post\">
+									<a style=\"margin-top: 10px;\" href=\"desc.php?id={$dados['id']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\">Ver mais</a>
 								</form>
 							</div>
 						</div>
@@ -84,13 +84,13 @@
 							<div class=\"card-title\"> 
 								<h4 class=\"card-title-text\">{$dados['Nome']}</h4>
 							</div>
-							<img src=\"/eachphp/site/pages/produtos/{$dados['id']}.jpg\" class=\"img-fluid\" width=\"110px\">
+							<img src=\"produtos/{$dados['id']}.jpg\" class=\"img-fluid\" width=\"110px\">
 								
 							<div class=\"card-text\">
 <span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
-								<form action=\"/eachphp/site/pages/desc.php\" method=\"post\">
-									<a style=\"margin-top: 10px;\" href=\"/eachphp/site/pages/desc.php?id={$dados['id']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\">Editar</a>
-									<a style=\"margin-top: 10px;\" href=\"/eachphp/site/pages/delete.php?id={$dados['id']}&vend={$dados['Vendedor']}\" name=\"id\" id=\"id\" class=\"btn btn-danger\">Deletar</a>
+								<form action=\"desc.php\" method=\"post\">
+									<a style=\"margin-top: 10px;\" href=\"desc.php?id={$dados['id']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\">Editar</a>
+									<a style=\"margin-top: 10px;\" href=\"delete.php?id={$dados['id']}&vend={$dados['Vendedor']}\" name=\"id\" id=\"id\" class=\"btn btn-danger\">Deletar</a>
 								</form>
 							</div>
 						</div>

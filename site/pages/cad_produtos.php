@@ -17,7 +17,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
- <link rel="stylesheet" type="text/css" href="/eachphp/site/pages/css/cad_produtos.css">
+ <link rel="stylesheet" type="text/css" href="css/cad_produtos.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -26,7 +26,7 @@
 <div id="nav-placeholder"> </div>
 	<script>
 	$(function(){
-	  $("#nav-placeholder").load("/eachphp/site/resources/nav.php");
+	  $("#nav-placeholder").load("../resources/nav.php");
 	});
 	</script>
 <br>
@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
 		move_uploaded_file($_FILES['image']['tmp_name'], $target);
 	    
 	    echo ("<br><br><center><h1 style=\"color: white;\">Adicionado!</h1></center><br>
-	    	<center><a style=\"margin-top: 10px;\" href=\"/eachphp/index.php\" class=\"btn btn-primary\"><h3>Voltar para o início</h3></a></center>");
+	    	<center><a style=\"margin-top: 10px;\" href=\"../../index.php\" class=\"btn btn-primary\"><h3>Voltar para o início</h3></a></center>");
 	} else{
 	    echo "Alguma entrada incorreta foi inserida. Tente novamente mais tarde. " . mysqli_error($link);
 	}
@@ -98,7 +98,7 @@ if (isset($_POST['submit'])) {
 									    <br>
 									    <input type="submit" value="Enviar" name="submit" id="submit">
 								</form>
-									<a style="margin-top: 10px;" href="/eachphp/index.php" class="btn btn-primary">Voltar</a><br><br>		
+									<a style="margin-top: 10px;" href="../../index.php" class="btn btn-primary">Voltar</a><br><br>		
 							</div>
 						</div>
 					</div>
@@ -108,7 +108,7 @@ if (isset($_POST['submit'])) {
 <?php
 		} else {
 			echo ("<br><br><center><h1 style=\"color: white;\">Inicie sessão para prosseguir!</h1></center><br>
-	    	<center><a style=\"margin-top: 10px;\" href=\"/eachphp/site/pages/login.html\" class=\"btn btn-primary\"><h3>Iniciar sessão</h3></a></center>");
+	    	<center><a style=\"margin-top: 10px;\" href=\"login.html\" class=\"btn btn-primary\"><h3>Iniciar sessão</h3></a></center>");
 		} 
 	} //fim do else, para sumir com todo o html quando o submit for acionado.
 ?>

@@ -14,7 +14,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
- <link rel="stylesheet" type="text/css" href="/eachphp/site/pages/css/index.css">
+ <link rel="stylesheet" type="text/css" href="site/pages/css/index.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -24,7 +24,7 @@
 <div id="nav-placeholder"> </div>
 	<script>
 	$(function(){
-	  $("#nav-placeholder").load("/eachphp/site/resources/nav.php");
+	  $("#nav-placeholder").load("site/resources/nav.php");
 	});
 	</script>
 <br>
@@ -32,7 +32,7 @@
 
 if (isset($_SESSION['login'])) {
 	echo("<h1 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left>
-				<span style=\"display:block; height: 30px;\"> &emsp; Novo produto: <a style=\"margin-top: 10px;\" href=\"/eachphp/site/pages/cad_produtos.php\" class=\"btn btn-primary\">+</a></span>
+				<span style=\"display:block; height: 30px;\"> &emsp; Novo produto: <a style=\"margin-top: 10px;\" href=\"site/pages/cad_produtos.php\" class=\"btn btn-primary\">+</a></span>
 			</h1>");
 	} else {
 		echo("<h3 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left>
@@ -71,10 +71,10 @@ if (isset($_SESSION['login'])) {
 								
 							<div class=\"card-text\">
 								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
-								<span style=\"color: red; font-weight: bold;\">Vendedor: </span><a href=\"/eachphp/site/pages/productsby.php?vend={$dados['Vendedor']}\">{$dados['Vendedor']}</a>
+								<span style=\"color: red; font-weight: bold;\">Vendedor: </span><a href=\"site/pages/productsby.php?vend={$dados['Vendedor']}\">{$dados['Vendedor']}</a>
 								<br>
-								<form action=\"/eachphp/site/pages/desc.php\" method=\"post\">
-									<a style=\"margin-top: 10px;\" href=\"/eachphp/site/pages/desc.php?id={$dados['id']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\">Ver mais</a>
+								<form action=\"site/pages/desc.php\" method=\"post\">
+									<a style=\"margin-top: 10px;\" href=\"site/pages/desc.php?id={$dados['id']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\">Ver mais</a>
 								</form>
 							</div>
 						</div>
