@@ -16,7 +16,7 @@
   <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     
-  </button><a class="navbar-brand mr-auto" href="#"><img src="/eachphp/site/resources/logo.png" width="110px"></a>
+  </button><a class="navbar-brand mr-auto" href="/eachphp/index.php"><img src="/eachphp/site/resources/logo.png" width="110px"></a>
   
   <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo01">
  
