@@ -5,16 +5,33 @@
 
 <script type='text/javascript'>
 function loginsucessfully(){
+<<<<<<< HEAD
 
 	window.open('../../index.php', '_parent'); 
 }
 
+<<<<<<< HEAD
 
 
 
 function loginfailed(){
 	alert('Usuário os senhas inválidos');
 window.open('login.html', '_parent'); 
+=======
+
+
+
+function loginfailed(){
+	alert('Usuário os senhas inválidos');
+window.open('login.html', '_parent'); 
+=======
+	window.open('../../index.php', '_parent'); 
+}
+
+function loginfailed(){
+	setTimeout(function() {window.open('login.html', '_parent')}, 6000); 
+>>>>>>> e290c9aa8111346e4fcce4ca06b4d7398982789c
+>>>>>>> 3449cdfc61af783e32dcbe4c4ec4eb9ed307505b
 }
 //setTimeout('window.location='../index.html'',5000);
 </script>

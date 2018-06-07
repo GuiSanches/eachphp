@@ -57,8 +57,11 @@ if (isset($_POST['submit'])) {
 
 		move_uploaded_file($_FILES['image']['tmp_name'], $target);
 	    
-	    echo ("<br><br><center><h1 style=\"color: white;\">Adicionado!<br>Seu produto agora aguarda aprovação por um administrador,<br>mas já está disponível em \"Meus Produtos\"</h1></center><br>
-	    	<center><a style=\"margin-top: 10px;\" href=\"../../index.php\" class=\"btn btn-primary\"><h3>Voltar para o início</h3></a></center>");
+	    echo ("<br><br><center><h1 style=\"color: white;\">Adicionado!<br>Seu produto agora aguarda aprovação por um administrador,<br>mas já está disponível em \"Meus Produtos\"</h1></center><br><br>
+	    	<center>
+	    	<a style=\"margin-top: 10px;\" href=\"cad_produtos.php\" class=\"btn btn-primary\"><h3>Adicionar outro produto</h3></a><br><br>
+	    	<a style=\"margin-top: 10px;\" href=\"../../index.php\" class=\"btn btn-primary\"><h3>Voltar para o início</h3></a>
+	    	</center>");
 	} else{
 	    echo "Alguma entrada incorreta foi inserida. Tente novamente mais tarde. " . mysqli_error($link);
 	}
