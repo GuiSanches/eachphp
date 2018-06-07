@@ -6,12 +6,15 @@
 <script type='text/javascript'>
 function loginsucessfully(){
 
-setTimeout(function() {window.open('../../index.php', '_parent')}, 5000); 
+	window.open('../../index.php', '_parent'); 
 }
 
-function loginfailed(){
-setTimeout(function() {window.open('login.html', '_parent')}, 6000); 
 
+
+
+function loginfailed(){
+	alert('Usuário os senhas inválidos');
+window.open('login.html', '_parent'); 
 }
 //setTimeout('window.location='../index.html'',5000);
 </script>
@@ -42,6 +45,9 @@ $senha = $_POST['psw'];
 		$_SESSION['senha'] = $senha;	
     	$_SESSION['nome'] = $dados['nome'];	
     	$_SESSION['color'] = $dados['cor'];
+    	$_SESSION['photo'] = $dados['foto'];
+    	$_SESSION['local'] = $dados['local'];
+    	
 		
 echo "<script>loginsucessfully()</script>";
 		echo "Você foi autenticado com sucesso! Aguarde um instante...";

@@ -1,0 +1,74 @@
+  
+  @import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+  
+
+  .navbar-dark {
+    background-color: #fdb523;
+    font-family: 'Do Hyeon', sans-serif;
+    color: green;
+    font-size: 25px;
+  }
+
+
+  body {
+    background-image: url("../../resources/bg.jpg");
+    color: black;
+      font-family: 'Do Hyeon', sans-serif;
+  }
+
+  .card{
+    background-color: #E0E0E0;
+
+  }
+
+  .row{
+      margin-top: 30px;
+  }
+
+  .card-text {
+    margin-top: 10px;
+    margin-bottom: 110px;
+    font-size: 170%;
+  }
+
+  .card-title {
+    background-color: #fdb523;
+  }
+
+  .card-title-text {
+    font-family: 'Do Hyeon', sans-serif;
+  }
+
+}
+
+.img-fluid {  /* 50% 50% centers image in div */
+  width: 50px;
+  height: 50px;
+  margin-top: 100px;
+}
+
+h1 {
+  color: white;
+  margin-bottom: -10px;
+}
+
+h5 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.btn-danger{
+border-top-right-radius: 0px;
+border-top-left-radius: 0px;
+}
+
+.btn-success{
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 0px;
+}
+
+.list-group .colorinput{
+  width:100%;
+  height:50px;
+}
+

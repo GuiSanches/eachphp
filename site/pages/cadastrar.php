@@ -4,7 +4,7 @@ $conn = new mysqli("localhost", "root", "", "coolsunday");
 
 $nome = $_POST['uname'];
 $usuario = $_POST['user'];
-$senha = $_POST['psw'];
+$senha = md5($_POST['psw']);
 $cor = $_POST['color'];
 //$senha2 = $_POST['psw-repeat'];
 
@@ -33,7 +33,7 @@ voltar();
 		
 }else{		
 
-$sql = mysqli_query($conn, "INSERT INTO vendedor (id,nome,usuario,senha,cor) values (default,'$nome','$usuario','$senha','$cor')");
+$sql = mysqli_query($conn, "INSERT INTO vendedor values (default,'$usuario','$senha','$nome','$cor');");
 
 if ($sql) { 
 			echo"
@@ -43,7 +43,7 @@ if ($sql) {
 alert('Cadastrado com sucesso!');
 
 function registersucessfully(){
-setTimeout(function() {window.open('login.html', '_parent')}, 2000); 
+	window.open('login.html', '_parent'); 
 }
 
 registersucessfully();
