@@ -45,11 +45,13 @@
 								
 							<div class=\"card-text\">
 								
-								<span style=\"color: #fdb523; font-weight: bold;\">Descrição rápida: </span><br>{$dados['Descricao']}<br><br>
-								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
+								<span style=\"color: #fdb523; font-weight: bold;\">Descrição rápida: </span><br>{$dados['Descricao']}<br>
+								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br
 								<span style=\"color: blue; font-weight: bold;\">Local: </span><br>
 								<span style=\"color: red; font-weight: bold;\">Vendedor: </span>{$dados['Vendedor']}<br>
 								<a style=\"margin-top: 10px;\" href=\"../../index.php\" name=\"id\" id=\"id\" class=\"btn btn-primary\"><span style=\"font-size: 20px;\">Voltar</span></a>
+
+								<a style=\"margin-top: 10px;\" href=\"/eachphp/site/pages/editproduct.php?prodId={$dados['id']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\"><span style=\"font-size: 20px;\">Editar</span></a>
 								<br><br>
 							</div>
 						</div>

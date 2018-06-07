@@ -12,9 +12,11 @@
       }
  ?>
 
+
+
  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: <?php echo($color) ?> !important;">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"   rel="stylesheet">
+<link href="/eachphp/site/pages/css/nav.css"   rel="stylesheet">
   <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     
@@ -32,10 +34,16 @@
       <li class="nav-item">
 		<?php 
 		if (isset($_SESSION['login'])) {
-			echo("<a class=\"nav-link\" href=\"/eachphp/site/pages/productsby.php?vend={$login}\">{$login}</a>");
-			echo("<li class=\"nav-item\">
-        			<a class=\"nav-link\" href=\"/eachphp/site/pages/logout.php\">Sair</a>
-      			</li></li>");
+			echo("<li class=\"nav-item\"><a class=\"nav-link\" >{$login}</a></li>");
+			echo( "<a class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"site/pages/login.html\" >
+				<img src='/eachphp/site/resources/logicon.png' class=\"icologin\" /></a>
+<div class=\"dropdown-menu dropdown-menu-right\">
+    <a class=\"dropdown-item\" href=\"/eachphp/site/pages/myinfo.php?vend={$login}\">Meus dados</a>
+    <a class=\"dropdown-item\" href=\"/eachphp/site/pages/productsby.php?vend={$_SESSION['login']}\">Meus produtos</a>
+    <div class=\"dropdown-divider\"></div>
+    <a class=\"dropdown-item\" href=\"/eachphp/site/pages/desconectar.php\">Sair</a>
+  </div>
+            </li>");
 		} else {
 			echo("<a class=\"nav-link\" href=\"/eachphp/site/pages/login.html\">Entrar</a></li>");
 		}

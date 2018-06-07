@@ -1,11 +1,11 @@
-﻿<html lang="en">
+<html lang="en">
 <?php
-	$login = null;
+	$login = false;
 	if (!isset($_SESSION)){
 		session_start();     
 	
 		    if (isset($_SESSION['login'])) {
-		    	$login = $_SESSION['login'];
+		    	$login = $_SESSION['nome'];
 		    } 
       }
  ?>
@@ -34,7 +34,7 @@
 	if ($login != $vend) {
 		echo("<h3 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left><span style=\"display:block; height: 30px;\">&emsp;&emsp;Produtos por: {$vend}</span></h3>");
 	} else {
-		echo("<h3 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left><span style=\"display:block; height: 30px;\">&emsp;&emsp;Meus produtos</span></h3>");
+		echo("<h3 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left><span style=\"display:block; height: 30px;\">&emsp;&emsp;Meus dados</span></h3>");
 	}
 
 ?>
@@ -55,7 +55,7 @@
 				$sql = mysqli_query($conn,"SELECT * FROM produtos WHERE id=$linha") or die (mysqli_error($conn)); //Começa as putaria.
 				$dados = mysqli_fetch_array($sql);
 
-				if ($dados != null && $dados['Aprovado'] == true && $dados['Usuario'] == $vend && $login != $dados['Usuario']) {
+				if ($dados != null && $dados['Aprovado'] == true && $dados['Vendedor'] == $vend && $login != $dados['Vendedor']) {
 						
 					echo("<div class=\"col-md-3 col-sm-6 p-3\">
 					<div class=\"card text-center\" > 
@@ -67,7 +67,7 @@
 								
 							<div class=\"card-text\">
 								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
-								<span style=\"color: red; font-weight: bold;\">Vendedor: </span><a href=\"productsby.php?vend={$dados['Usuario']}\">{$dados['Vendedor']}</a>
+								<span style=\"color: red; font-weight: bold;\">Vendedor: </span><a href=\"productsby.php?vend={$dados['Vendedor']}\">{$dados['Vendedor']}</a>
 								<br>
 								<form action=\"desc.php\" method=\"post\">
 									<a style=\"margin-top: 10px;\" href=\"desc.php?id={$dados['id']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\">Ver mais</a>
@@ -76,7 +76,7 @@
 						</div>
 					</div>
 				</div>");
-				} else if ($dados != null && $dados['Usuario'] == $vend && $dados['Usuario'] == $_SESSION['login']) {
+				} else if ($dados != null && $dados['Vendedor'] == $vend && $dados['Vendedor'] == $_SESSION['nome']) {
 						
 					echo("<div class=\"col-md-3 col-sm-6 p-3\">
 					<div class=\"card text-center\" > 
@@ -90,7 +90,7 @@
 <span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
 								<form action=\"desc.php\" method=\"post\">
 									<a style=\"margin-top: 10px;\" href=\"desc.php?id={$dados['id']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\">Editar</a>
-									<a style=\"margin-top: 10px;\" href=\"delete.php?id={$dados['id']}&vend={$dados['Usuario']}\" name=\"id\" id=\"id\" class=\"btn btn-danger\">Deletar</a>
+									<a style=\"margin-top: 10px;\" href=\"delete.php?id={$dados['id']}&vend={$dados['Vendedor']}\" name=\"id\" id=\"id\" class=\"btn btn-danger\">Deletar</a>
 								</form>
 							</div>
 						</div>

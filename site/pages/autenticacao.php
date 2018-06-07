@@ -6,12 +6,15 @@
 <script type='text/javascript'>
 function loginsucessfully(){
 
-setTimeout(function() {window.open('../../index.php', '_parent')}, 5000); 
+	window.open('../../index.php', '_parent'); 
 }
 
-function loginfailed(){
-setTimeout(function() {window.open('login.html', '_parent')}, 6000); 
 
+
+
+function loginfailed(){
+	alert('Usuário os senhas inválidos');
+window.open('login.html', '_parent'); 
 }
 //setTimeout('window.location='../index.html'',5000);
 </script>
