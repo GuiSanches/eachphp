@@ -32,8 +32,8 @@
 
 if (isset($_SESSION['login'])) {
 	echo("<h1 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left>
-				<span style=\"display:block; height: 30px;\"> &emsp; Novo produto: <a style=\"margin-top: 10px;\" href=\"site/pages/cad_produtos.php\" class=\"btn btn-primary\">+</a></span>
-			</h1>");
+				<span style=\"display:block; height: 30px;\">&nbsp;&nbsp;<a style=\"margin-top: 10px; font-size: 25px;;\" href=\"site/pages/cad_produtos.php\" class=\"btn btn-primary\">Adicionar produto!</a></span>
+			</h1><br>");
 	} else {
 		echo("<h3 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left>
 				<span style=\"display:block; height: 30px;\">&emsp;&emsp;Dica: Inicie sessão para adicionar seu produto!</span>
@@ -71,7 +71,7 @@ if (isset($_SESSION['login'])) {
 								
 							<div class=\"card-text\">
 								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
-								<span style=\"color: red; font-weight: bold;\">Vendedor: </span><a href=\"site/pages/productsby.php?vend={$dados['Vendedor']}\">{$dados['Vendedor']}</a>
+								<span style=\"color: red; font-weight: bold;\">Vendedor: </span><a href=\"site/pages/productsby.php?vend={$dados['Usuario']}\">{$dados['Vendedor']}</a>
 								<br>
 								<form action=\"site/pages/desc.php\" method=\"post\">
 									<a style=\"margin-top: 10px;\" href=\"site/pages/desc.php?id={$dados['id']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\">Ver mais</a>

@@ -5,13 +5,11 @@
 
 <script type='text/javascript'>
 function loginsucessfully(){
-
-setTimeout(function() {window.open('../../index.php', '_parent')}, 5000); 
+	window.open('../../index.php', '_parent'); 
 }
 
 function loginfailed(){
-setTimeout(function() {window.open('login.html', '_parent')}, 6000); 
-
+	setTimeout(function() {window.open('login.html', '_parent')}, 6000); 
 }
 //setTimeout('window.location='../index.html'',5000);
 </script>
