@@ -5,6 +5,7 @@
 
 <script type='text/javascript'>
 function loginsucessfully(){
+<<<<<<< HEAD
 
 	window.open('../../index.php', '_parent'); 
 }
@@ -15,6 +16,13 @@ function loginsucessfully(){
 function loginfailed(){
 	alert('Usuário os senhas inválidos');
 window.open('login.html', '_parent'); 
+=======
+	window.open('../../index.php', '_parent'); 
+}
+
+function loginfailed(){
+	setTimeout(function() {window.open('login.html', '_parent')}, 6000); 
+>>>>>>> e290c9aa8111346e4fcce4ca06b4d7398982789c
 }
 //setTimeout('window.location='../index.html'',5000);
 </script>
