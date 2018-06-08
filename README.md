@@ -32,8 +32,7 @@ create table vendedor (
 id int(11) auto_increment primary key,
 usuario varchar(50),
 senha varchar(50),
-nome varchar(50),
-cor varchar(7) not null default '#fdb523'
+nome varchar(50)
 );
 ```
 ### Tabela para produtos
@@ -45,14 +44,13 @@ id int(11) auto_increment primary key,
 Nome varchar(25),
 Preco decimal(4,2),
 Vendedor varchar(30),
-Usuario varchar(30),
 Descricao varchar(600),
 Aprovado boolean not null default 1
 );
 ```
 
 ## Testar o projeto
-Para testar o site durante seu desenvolvimento, clone o repositório no endereço abaixo ou similar:
+Para testar o site, clone o repositório no endereço abaixo ou similar:
 ```
 C:\wamp64\www
 ```

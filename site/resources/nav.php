@@ -34,7 +34,6 @@
       <li class="nav-item">
 		<?php 
 		if (isset($_SESSION['login'])) {
-<<<<<<< HEAD
 			
 
      $usericon="/eachphp/site/resources/perfil/{$_SESSION['photo']}";
@@ -48,16 +47,6 @@
     <a class=\"dropdown-item\" href=\"/eachphp/site/pages/productsby.php?vend={$_SESSION['login']}\">Meus produtos</a>
     <div class=\"dropdown-divider\"></div>
     <a class=\"dropdown-item\" href=\"/eachphp/site/pages/logout.php\">Sair</a>
-=======
-			echo("<li class=\"nav-item\"><a class=\"nav-link\" >{$login}</a></li>");
-			echo( "<a class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"site/pages/login.html\" >
-				<img src='/eachphp/site/resources/logicon.png' class=\"icologin\" /></a>
-<div class=\"dropdown-menu dropdown-menu-right\">
-    <a class=\"dropdown-item\" href=\"/eachphp/site/pages/myinfo.php?vend={$login}\">Meus dados</a>
-    <a class=\"dropdown-item\" href=\"/eachphp/site/pages/productsby.php?vend={$_SESSION['login']}\">Meus produtos</a>
-    <div class=\"dropdown-divider\"></div>
-    <a class=\"dropdown-item\" href=\"/eachphp/site/pages/desconectar.php\">Sair</a>
->>>>>>> 3449cdfc61af783e32dcbe4c4ec4eb9ed307505b
   </div>
             </li>");
 		} else {
