@@ -8,8 +8,8 @@
 		    	$login = $_SESSION['nome'];
 		    }else{
 		    	echo"<script type='text/javascript'>
-		    	window.open('/eachphp/index.php', '_parent'); 
-       </script>
+		    	window.open('../../index.php', '_parent'); 
+       	</script>
     	    	";
 		    }
       }
@@ -32,10 +32,10 @@
 	});
 	</script>
 <br>
-<?php 
-	$conn = new mysqli("localhost", "root", "", "coolsunday"); //Conexão com banco de dados estabelecida.
+<?php
 
-
+	require '../resources/config.php';
+	$conn = mysqli_connect($host, $user, $password, $bd);
 
 		echo("<h3 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left><span style=\"display:block; height: 30px;\">&emsp;&emsp;Seus dados</span></h3>");
 

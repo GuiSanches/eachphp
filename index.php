@@ -47,8 +47,8 @@ if (isset($_SESSION['login'])) {
 
 		<?php
 		function renderCards() {
-
-			$conn = new mysqli("localhost", "root", "", "coolsunday"); //Conexão com banco de dados estabelecida.
+			require 'site/resources/config.php';
+			$conn = new mysqli($host, $user, $password, $bd); //Conexão com banco de dados estabelecida.
 			$sql = mysqli_query($conn,"SELECT * FROM produtos ORDER BY id DESC LIMIT 0, 1") or die (mysqli_error($conn)); //Seleciona todas as informações sobre o produto com o maior ID.
 			mysqli_set_charset($conn,"utf8"); 
 			$dados = mysqli_fetch_array($sql); //Armazena todas as linhas do produto com o maior ID.

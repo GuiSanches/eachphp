@@ -10,7 +10,8 @@ $login = false;
       }
 
 
-$link = mysqli_connect("localhost", "root", "", "coolsunday");
+require '../resources/config.php';
+$link = mysqli_connect($host, $user, $password, $bd);
 mysqli_set_charset($link,"utf8"); 
 $prodId = mysqli_real_escape_string($link, $_REQUEST['prodId']); 
 

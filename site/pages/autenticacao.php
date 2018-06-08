@@ -27,8 +27,8 @@ window.open('login.html', '_parent');
 
 
 <?php
-
-$db = new mysqli("localhost", "root","", "coolsunday") or die (mysqli_error($db));
+require '../resources/config.php';
+$db = new mysqli($host, $user, $password, $bd) or die (mysqli_error($db));
 
 session_start();
 

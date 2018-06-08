@@ -2,7 +2,9 @@
 	if (!isset($_SESSION)){
 		session_start();     
      }
-      	$conn = new mysqli("localhost", "root", "", "coolsunday"); //Conexão com banco de dados estabelecida.
+      	require '../resources/config.php';
+		$conn = mysqli_connect($host, $user, $password, $bd);
+
 		$id = mysqli_real_escape_string($conn, $_REQUEST['id']);
 		$vend = mysqli_real_escape_string($conn, $_REQUEST['vend']);
 

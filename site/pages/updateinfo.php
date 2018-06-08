@@ -8,14 +8,15 @@ $login = false;
 		    	$login = $_SESSION['nome'];
 		    }else{
 		    	echo"<script type='text/javascript'>
-		    	window.open('/eachphp/index.php', '_parent'); 
+		    	window.open('../../index.php', '_parent'); 
        </script>
     	    	";
 		    }
       }
 
 
-$link = mysqli_connect("localhost", "root", "", "coolsunday");
+require '../resources/config.php';
+$link = mysqli_connect($host, $user, $password, $bd);
 mysqli_set_charset($link,"utf8"); 
 
 

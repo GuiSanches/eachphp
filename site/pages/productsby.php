@@ -28,7 +28,8 @@
 	</script>
 <br>
 <?php 
-	$conn = new mysqli("localhost", "root", "", "coolsunday"); //Conexão com banco de dados estabelecida.
+	require '../resources/config.php';
+	$conn = mysqli_connect($host, $user, $password, $bd);
 	$vend = mysqli_real_escape_string($conn, $_REQUEST['vend']); 
 
 	if ($login != $vend) {
@@ -43,8 +44,8 @@
 	<div class="row">
 
 		<?php
-
-			$conn = new mysqli("localhost", "root", "", "coolsunday"); //Conexão com banco de dados estabelecida.
+			require '../resources/config.php';
+			$conn = mysqli_connect($host, $user, $password, $bd);
 			$sql = mysqli_query($conn,"SELECT * FROM produtos ORDER BY id DESC LIMIT 0, 1") or die (mysqli_error($conn)); //Seleciona todas as informações sobre o produto com o maior ID.
 			mysqli_set_charset($conn,"utf8"); 
 			$dados = mysqli_fetch_array($sql); //Armazena todas as linhas do produto com o maior ID.

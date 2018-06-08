@@ -22,7 +22,8 @@
 	</script>
 <br>
 <?php
-	$link = mysqli_connect("localhost", "root", "", "coolsunday");
+	require '../resources/config.php';
+	$link = mysqli_connect($host, $user, $password, $bd);
 
 	if($link === false){
     die("Um erro interno inesperado aconteceu. " . mysqli_connect_error());
