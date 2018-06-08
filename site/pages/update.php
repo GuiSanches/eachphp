@@ -5,7 +5,7 @@ $login = false;
 		session_start();     
 	
 		    if (isset($_SESSION['login'])) {
-		    	$login = $_SESSION['usuario'];
+		    	$login = $_SESSION['nome'];
 		    } 
       }
 
@@ -25,7 +25,7 @@ mysqli_set_charset($link,"utf8");
 	$desc = $_POST['desc'];
 	$vendedor = $_SESSION['login'];
 
-	$sql = "UPDATE produtos SET Nome = '$nome', Preco = '$preco', Descricao='$desc', Aprovado=default WHERE id='{$prodId}'";
+	$sql = "UPDATE produtos SET Nome = '$nome', Preco = '$preco', Descricao='$desc' WHERE id='{$prodId}'";
 
 	if(mysqli_query($link, $sql)){
 
