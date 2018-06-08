@@ -4,7 +4,7 @@ $conn = new mysqli("localhost", "root", "", "coolsunday");
 
 $nome = $_POST['uname'];
 $usuario = $_POST['user'];
-$senha = md5($_POST['psw']);
+$senha = $_POST['psw'];
 $cor = $_POST['color'];
 //$senha2 = $_POST['psw-repeat'];
 

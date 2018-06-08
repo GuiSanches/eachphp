@@ -62,9 +62,9 @@ $user = $_SESSION['login'];
 							<div class=\"card-title\"> 
 								<h1 class=\"card-title-text\"> Alterar informações</h1><br>
 							</div>
-<form class='form' method='POST' action='/eachphp/site/pages/updateinfo.php' accept-charset='UTF-8' enctype='multipart/form-data'>
+<form class='form' method='POST' action='updateinfo.php' accept-charset='UTF-8' enctype='multipart/form-data'>
 
-<img src=\"/eachphp/site/resources/perfil/{$_SESSION['photo']}\" class=\"img-fluid\" style=\"width: 30%;\"><br>
+<img src=\"../resources/perfil/{$_SESSION['photo']}\" class=\"img-fluid\" style=\"width: 30%;\"><br>
  Alterar Imagem:<br> 
 	<input type='file' name='image' value='null'/>	<br><br>
 
