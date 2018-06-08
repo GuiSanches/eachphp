@@ -60,10 +60,10 @@
 								Local: <br><input type='text' value='ainda nao tem'/>  <br>
 						     Vendedor: </span>{$dados['Vendedor']}<br>
 								
-						     	<button class='btn btn-success' style=\"font-size: 20px; margin-bottom:-10px;\" type='submit'>Salvar</button>
-								<a style=\"margin-top: 10px;\" href=\"productsby.php?vend={$login}\" name=\"id\" id=\"id\" class=\"btn btn-danger\"><span style=\"font-size: 20px;\">Voltar</span></a>
 
-								
+								<a style=\"margin-top: 10px;\" href=\"/eachphp/site/pages/productsby.php?vend={$login}\" name=\"id\" id=\"id\" class=\"btn btn-primary\"><span style=\"font-size: 20px;\">Voltar</span></a>
+
+								<button class='btn btn-primary' style=\"font-size: 20px; margin-bottom:-10px;\" type='submit'>Salvar</button>
 								</form>
 								<br><br>
 							</div>
