@@ -48,7 +48,7 @@
 							<div class=\"card-title\"> 
 								<h1 class=\"card-title-text\"> Alterar informações</h1><br>
 							</div>
-							<form class='form' method='POST' action='/eachphp/site/pages/update.php?prodId=$prodId' accept-charset='UTF-8' enctype='multipart/form-data'>
+							<form class='form' method='POST' action='update.php?prodId=$prodId' accept-charset='UTF-8' enctype='multipart/form-data'>
 							<img src=\"produtos/{$dados['id']}.jpg\" class=\"img-fluid\" style=\"width: 30%;\"><br>
 								 Alterar Imagem:
 							<br> <input type='file' name='image'/>		<br>
@@ -61,7 +61,7 @@
 						     Vendedor: </span>{$dados['Vendedor']}<br>
 								
 
-								<a style=\"margin-top: 10px;\" href=\"/eachphp/site/pages/productsby.php?vend={$login}\" name=\"id\" id=\"id\" class=\"btn btn-primary\"><span style=\"font-size: 20px;\">Voltar</span></a>
+								<a style=\"margin-top: 10px;\" href=\"productsby.php?vend={$login}\" name=\"id\" id=\"id\" class=\"btn btn-primary\"><span style=\"font-size: 20px;\">Voltar</span></a>
 
 								<button class='btn btn-primary' style=\"font-size: 20px; margin-bottom:-10px;\" type='submit'>Salvar</button>
 								</form>

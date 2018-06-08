@@ -46,7 +46,7 @@ mysqli_set_charset($link,"utf8");
 alert('Informações atualizadas! Suas alterações agora aguardam aprovação por um administrador');
 
 function registersucessfully(){
-setTimeout(function() {window.open('/eachphp/site/pages/productsby.php?vend={$_SESSION['login']}', '_parent')}, 0); 
+setTimeout(function() {window.open('productsby.php?vend={$_SESSION['login']}', '_parent')}, 0); 
 }
 
 registersucessfully();
@@ -59,7 +59,7 @@ registersucessfully();
 alert('Aconteceu algum erro! : /');
 
 function registerfail(){
-setTimeout(function() {window.open('/eachphp/site/pages/productsby.php?vend={$_SESSION['login']}', '_parent')}, 0); 
+setTimeout(function() {window.open('productsby.php?vend={$_SESSION['login']}', '_parent')}, 0); 
 }
 
 registersfail();
