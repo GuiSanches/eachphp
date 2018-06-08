@@ -33,7 +33,7 @@ voltar();
 		
 }else{		
 
-$sql = mysqli_query($conn, "INSERT INTO vendedor values (default,'$usuario','$senha','$nome','$cor');");
+$sql = mysqli_query($conn, "INSERT INTO vendedor values (default,'$usuario','$senha','$nome','$cor',default,default);");
 
 if ($sql) { 
 			echo"

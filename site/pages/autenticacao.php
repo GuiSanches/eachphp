@@ -33,7 +33,7 @@ $db = new mysqli("localhost", "root","", "coolsunday") or die (mysqli_error($db)
 session_start();
 
 $login = $_POST['uname'];
-$senha = $_POST['psw'];	 
+$senha = md5($_POST['psw']);	 
 
 	$sql = mysqli_query( $db, "SELECT * FROM vendedor WHERE usuario = '$login' AND senha = '$senha'") or die (mysql_error());
 	$dados = mysqli_fetch_array($sql);
