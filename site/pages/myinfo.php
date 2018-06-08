@@ -76,7 +76,7 @@ $user = $_SESSION['login'];
 
 <div class='list-group'>								
   <span class='list-group-item active'>Usuário</span>
-  <span class='list-group-item'>{$dados['usuario']}</span>
+  <span class='list-group-item'>{$dados['Usuario']}</span>
  </div>
  <br>
 
