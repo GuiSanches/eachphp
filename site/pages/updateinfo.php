@@ -86,7 +86,7 @@ if($_SESSION['photo'] !== 'logicon.png'){
 <script language= 'JavaScript'> 
 
 alert('Seus dados foram atualizados!');
-window.open('/eachphp/site/pages/myinfo.php', '_parent');
+window.open('../../index.php', '_parent');
 
 
 </script>";
@@ -95,7 +95,7 @@ window.open('/eachphp/site/pages/myinfo.php', '_parent');
 <script language= 'JavaScript'> 
 
 alert('Aconteceu algum erro!');
-window.open('/eachphp/site/pages/myinfo.php', '_parent');
+window.open('../../index.php', '_parent');
 
 
 </script>" . mysqli_error($link);

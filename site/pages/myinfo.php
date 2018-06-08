@@ -40,7 +40,8 @@
 		echo("<h3 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left><span style=\"display:block; height: 30px;\">&emsp;&emsp;Seus dados</span></h3>");
 
 
-			$conn = new mysqli("localhost", "root", "", "coolsunday"); //Conexão com banco de dados estabelecida.
+			require '../resources/config.php';
+			$conn = new mysqli($host, $user, $password, $bd);
 			$sql = mysqli_query($conn,"SELECT * FROM produtos ORDER BY id DESC LIMIT 0, 1") or die (mysqli_error($conn)); //Seleciona todas as informações sobre o produto com o maior ID.
 			mysqli_set_charset($conn,"utf8"); 
 			$dados = mysqli_fetch_array($sql); //Armazena todas as linhas do produto com o maior ID.
@@ -62,9 +63,9 @@ $user = $_SESSION['login'];
 							<div class=\"card-title\"> 
 								<h1 class=\"card-title-text\"> Alterar informações</h1><br>
 							</div>
-<form class='form' method='POST' action='/eachphp/site/pages/updateinfo.php' accept-charset='UTF-8' enctype='multipart/form-data'>
+<form class='form' method='POST' action='updateinfo.php' accept-charset='UTF-8' enctype='multipart/form-data'>
 
-<img src=\"/eachphp/site/resources/perfil/{$_SESSION['photo']}\" class=\"img-fluid\" style=\"width: 30%;\"><br>
+<img src=\"../resources/perfil/{$_SESSION['photo']}\" class=\"img-fluid\" style=\"width: 30%;\"><br>
  Alterar Imagem:<br> 
 	<input type='file' name='image' value='null'/>	<br><br>
 
@@ -100,7 +101,7 @@ $user = $_SESSION['login'];
   
 <div class='list-group'>	
 <button class='list-group-tem btn btn-success btn-lg' style=\"font-size: 20px; margin-bottom:-10px; width:100.5%; margin-left:-1px;\" type='submit'>Salvar</button>
-<a style=\"margin-top: 10px; margin-bottom:-17px; width:100.5%; margin-left:-1px;\" href=\"/eachphp/index.php\" name=\"id\" id=\"id\" class=\"btn btn-danger btn-lg\"><span style=\"font-size: 20px;\">Voltar</span></a>
+<a style=\"margin-top: 10px; margin-bottom:-17px; width:100.5%; margin-left:-1px;\" href=\"../../index.php\" name=\"id\" id=\"id\" class=\"btn btn-danger btn-lg\"><span style=\"font-size: 20px;\">Voltar</span></a>
 								</form>
 </div>
 							
