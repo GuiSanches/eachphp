@@ -33,7 +33,9 @@ id int(11) auto_increment primary key,
 usuario varchar(50),
 senha varchar(50),
 nome varchar(50),
-cor varchar(7) not null default '#fdb523'
+cor varchar(7) not null default '#fdb523',
+foto varchar(50) not null default 'logicon.png',
+local varchar(50) not null default 'each'
 );
 ```
 ### Tabela para produtos
