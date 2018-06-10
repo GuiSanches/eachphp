@@ -1,4 +1,5 @@
-﻿ <html lang=”pt-br”>
+﻿<!DOCTYPE html>
+<html lang=”pt-br”>
 <?php
 	if (!isset($_SESSION)){
 	
@@ -79,17 +80,16 @@ if (isset($_POST['submit'])) {
 								<form action="cad_produtos.php" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
 									    <p>
 									        <label for="nome">Nome do produto:</label><br>
-									        <input type="text" name="nome" id="nome">
+									        <input type="text" name="nome" id="nome" maxlength="20">
 									    </p>
 									    
 									    <p>
 									        <label for="preco">Preço: R$</label><br>
-									        <input type="text" name="preco" id="preco"><br>
-									        <p style="font-size: 12px; color: red;">Nota: Insira "." (ponto) ao invés de "," (vírgula).</p>
+									        <input type="number" name="preco" step=".01" id="preco"><br>
 									    </p>   
 									    <p>
 									        <label for="desc">Descrição rápida:</label><br>
-									        <textarea rows="4" cols="50" type="text" name="desc" id="desc" accept-charset="UTF-8"></textarea> 
+									        <textarea rows="4" cols="50" type="text" name="desc" id="desc" maxlength="600" accept-charset="UTF-8"></textarea> 
 									    </p>
 									    Upload de imagem:<br><br>
 									    <input type="hidden" name="size" value="1000000">

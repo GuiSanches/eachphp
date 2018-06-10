@@ -56,10 +56,10 @@
 								 Alterar Imagem:
 							<br> <input type='file' name='image'/>		<br>
 							<div class=\"card-text\">
-								Título do anúncio<input type='text' name='nome' value='{$dados['Nome']}' /><br>
+								Título do anúncio<input type='text' name='nome' value='{$dados['Nome']}' maxlength=\"20\" /><br>
 								
-								Descrição rápida: <input type='text' name='desc' value='{$dados['Descricao']}' /><br>
-							Preço: <br><input type='text' name='preco' value='{$dados['Preco']}' />  <br>
+								Descrição rápida: <input type='text' name='desc' value='{$dados['Descricao']}' maxlength=\"600\" /><br>
+							Preço: <br><input type='number' step='.01' name='preco' value='{$dados['Preco']}' />  <br>
 								Local:<br><span style=\"font-size: 18px;\"> (OBS: Edite em \"Meus Dados\" no seu perfil.)</span> <br><input type='text' value='{$dadosVend['local']}'readonly/>  <br>
 						     Vendedor: </span>{$dados['Vendedor']}<br>
 								
