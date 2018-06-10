@@ -32,9 +32,10 @@ mysqli_set_charset($link,"utf8");
 
 		$sql = mysqli_query($link,"SELECT * FROM produtos WHERE id='{$prodId}' ORDER BY id DESC LIMIT 0, 1") or die (mysqli_error($link));
 		$dados = mysqli_fetch_array($sql);
-		$target = "produtos/".$prodId.".jpg";
+		
 
-         if(isset($_FILES['image']['tmp_name'])){
+         if(!empty($_FILES['image']['tmp_name'])){
+         	$target = "produtos/".$prodId.".jpg";
          	unlink($target);    //deleteimg
          	move_uploaded_file($_FILES['image']['tmp_name'], $target);
          }
