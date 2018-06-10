@@ -90,7 +90,7 @@
 							<div class=\"card-text\">
 <span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
 								<form action=\"desc.php\" method=\"post\">
-									<a style=\"margin-top: 10px;\" href=\"desc.php?id={$dados['id']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\">Editar</a>
+									<a style=\"margin-top: 10px;\" href=\"editproduct.php?prodId={$dados['id']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\">Editar</a>
 									<a style=\"margin-top: 10px;\" href=\"delete.php?id={$dados['id']}&vend={$dados['Usuario']}\" name=\"id\" id=\"id\" class=\"btn btn-danger\">Deletar</a>
 								</form>
 							</div>

@@ -56,7 +56,7 @@
 								<span style=\"color: red; font-weight: bold;\">Vendedor: </span>{$dados['Vendedor']}<br>
 								<a style=\"margin-top: 10px;\" href=\"../../index.php\" name=\"id\" id=\"id\" class=\"btn btn-primary\"><span style=\"font-size: 20px;\">Voltar</span></a>
 
-								<a style=\"margin-top: 10px;\" href=\"editproduct.php?prodId={$dados['id']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\"><span style=\"font-size: 20px;\">Editar</span></a>
+								
 								<br><br>
 							</div>
 						</div>
