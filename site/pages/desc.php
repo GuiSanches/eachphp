@@ -23,18 +23,22 @@
 <br>
 <?php
 	require '../resources/config.php';
-	$link = mysqli_connect($host, $user, $password, $bd);
+	$conn = mysqli_connect($host, $user, $password, $bd);
 
-	if($link === false){
+	if($conn === false){
     die("Um erro interno inesperado aconteceu. " . mysqli_connect_error());
 	}
 
-	mysqli_set_charset($link,"utf8"); 
+	mysqli_set_charset($conn,"utf8"); 
 
-	$id = mysqli_real_escape_string($link, $_REQUEST['id']);
+	$id = mysqli_real_escape_string($conn, $_REQUEST['id']);
 	
-	$sql = mysqli_query($link, "SELECT * FROM produtos WHERE id=$id;");
+	$sql = mysqli_query($conn, "SELECT * FROM produtos WHERE id=$id;");
 	$dados = mysqli_fetch_array($sql);
+
+	$sql = mysqli_query($conn,"SELECT * FROM vendedor WHERE usuario='".$dados['Usuario']."'") or die (mysqli_error($conn));
+	$dadosVend = mysqli_fetch_array($sql);
+
 	echo("<center>
 		<div class=\"col-md-8 col-sm-8 p-3\">
 					<div class=\"card text-center\" > 
@@ -47,8 +51,8 @@
 							<div class=\"card-text\">
 								
 								<span style=\"color: #fdb523; font-weight: bold;\">Descrição rápida: </span><br>{$dados['Descricao']}<br>
-								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br
-								<span style=\"color: blue; font-weight: bold;\">Local: </span><br>
+								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
+								<span style=\"color: blue; font-weight: bold;\">Local: </span>{$dadosVend['local']}<br>
 								<span style=\"color: red; font-weight: bold;\">Vendedor: </span>{$dados['Vendedor']}<br>
 								<a style=\"margin-top: 10px;\" href=\"../../index.php\" name=\"id\" id=\"id\" class=\"btn btn-primary\"><span style=\"font-size: 20px;\">Voltar</span></a>
 

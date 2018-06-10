@@ -40,7 +40,10 @@
 				$dados = mysqli_fetch_array($sql);
 
 				if ($dados['Usuario'] == $_SESSION['login']) {
-						
+					
+					$sql = mysqli_query($conn,"SELECT * FROM vendedor WHERE usuario='".$dados['Usuario']."'") or die (mysqli_error($conn)); //Começa as putaria.
+					$dadosVend = mysqli_fetch_array($sql);
+
 					echo("<center>
 								<div class=\"col-md-5 col-sm-8 p-3\">
 					<div class=\"card text-center\" > 
@@ -57,7 +60,7 @@
 								
 								Descrição rápida: <input type='text' name='desc' value='{$dados['Descricao']}' /><br>
 							Preço: <br><input type='text' name='preco' value='{$dados['Preco']}' />  <br>
-								Local: <br><input type='text' value='ainda nao tem'/>  <br>
+								Local:<br><span style=\"font-size: 18px;\"> (OBS: Edite em \"Meus Dados\" no seu perfil.)</span> <br><input type='text' value='{$dadosVend['local']}'readonly/>  <br>
 						     Vendedor: </span>{$dados['Vendedor']}<br>
 								
 

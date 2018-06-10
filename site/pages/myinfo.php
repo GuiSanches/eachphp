@@ -49,7 +49,7 @@
 		
 $user = $_SESSION['login'];
 
-				$sql = mysqli_query($conn,"SELECT * FROM vendedor WHERE Usuario = '$user'") or die (mysqli_error($conn)); //Começa as putaria.
+				$sql = mysqli_query($conn,"SELECT * FROM vendedor WHERE usuario = '$user'") or die (mysqli_error($conn)); //Começa as putaria.
 				$dados = mysqli_fetch_array($sql);
 
 							
@@ -77,7 +77,7 @@ $user = $_SESSION['login'];
 
 <div class='list-group'>								
   <span class='list-group-item active'>Usuário</span>
-  <span class='list-group-item'>{$dados['Usuario']}</span>
+  <span class='list-group-item'>{$dados['usuario']}</span>
  </div>
  <br>
 

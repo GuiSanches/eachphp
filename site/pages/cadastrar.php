@@ -4,7 +4,7 @@ $conn = new mysqli("localhost", "root", "", "coolsunday");
 
 $nome = $_POST['uname'];
 $usuario = $_POST['user'];
-$senha = md5($_POST['psw']);
+$senha = $_POST['psw'];
 $cor = $_POST['color'];
 //$senha2 = $_POST['psw-repeat'];
 
@@ -33,7 +33,7 @@ voltar();
 		
 }else{		
 
-$sql = mysqli_query($conn, "INSERT INTO vendedor values (default,'$usuario','$senha','$nome','$cor');");
+$sql = mysqli_query($conn, "INSERT INTO vendedor values (default,'$usuario','$senha','$nome','$cor', default, default);");
 
 if ($sql) { 
 			echo"
@@ -51,7 +51,7 @@ registersucessfully();
 </script>";
 
 } else { 
-echo "Falha ao cadastrar.".mysql_error();
-}
+	echo "Falha ao cadastrar.".mysqli_error($conn);
+	}
 }
 ?>
