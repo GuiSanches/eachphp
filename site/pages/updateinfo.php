@@ -52,7 +52,7 @@ mysqli_set_charset($link,"utf8");
 	if(mysqli_query($link, $sql)){
 
 		
-if($_FILES['image']['name'] !== ""){
+if(!empty($_FILES['image']['name'])){
        
          if($photo !== $_SESSION['photo']){
 
