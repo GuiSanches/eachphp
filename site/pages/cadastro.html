@@ -41,6 +41,20 @@
     <input type="password"class="campo" placeholder="Senha" name="psw" required><br>
       <label for="psw-repeat" class="title"><b>Repita a senha</b></label><br>
     <input type="password" class="campo" placeholder="Repita a senha" name="psw-repeat" required><br>
+    <script>
+    	var senha1 = document.querySelector('[name=psw]');
+    	var senha2 = document.querySelector('[name=psw-repeat]');
+
+    	function validar() {
+	    	if (senha1.value != senha2.value) {
+	    		senha2.setCustomValidity("As senhas não coincidem!");
+	    	} else {
+	    		senha2.setCustomValidity("");
+	    	}
+	    }
+	    senha1.onchange = validar;
+	    senha2.onkeyup = validar;
+    </script>
     <label for="color" class="title"><b>Escolha o tema<br>OBS: Se escolher "branco", o amarelo padrão é aplicado</b></label><br>
     <input type="color" value="#fdb523" name="color">
 <br><br>
