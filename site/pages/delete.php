@@ -8,7 +8,7 @@
 		$id = mysqli_real_escape_string($conn, $_REQUEST['id']);
 		$vend = mysqli_real_escape_string($conn, $_REQUEST['vend']);
 
-     if ($_SESSION['login'] == $vend) {
+     if (strcasecmp($_SESSION['login'], $vend) == 0) {
 		mysqli_query($conn,"DELETE FROM produtos WHERE id={$id}");
 		header('Location: ' . $_SERVER['HTTP_REFERER']);
 	}

@@ -39,7 +39,7 @@
 				$sql = mysqli_query($conn,"SELECT * FROM produtos WHERE id=$prodId") or die (mysqli_error($conn)); //Começa as putaria.
 				$dados = mysqli_fetch_array($sql);
 
-				if ($dados['Usuario'] == $_SESSION['login']) {
+				if (strcasecmp($dados['Usuario'], $_SESSION['login']) == 0) {
 					
 					$sql = mysqli_query($conn,"SELECT * FROM vendedor WHERE usuario='".$dados['Usuario']."'") or die (mysqli_error($conn)); //Começa as putaria.
 					$dadosVend = mysqli_fetch_array($sql);

@@ -32,7 +32,7 @@
 	$conn = mysqli_connect($host, $user, $password, $bd);
 	$vend = mysqli_real_escape_string($conn, $_REQUEST['vend']); 
 
-	if ($login != $vend) {
+	if (strcasecmp($login, $vend) != 0) {
 		echo("<h3 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left><span style=\"display:block; height: 30px;\">&emsp;&emsp;Produtos por: {$vend}</span></h3>");
 	} else {
 		echo("<h3 style=\"color: white; font-family: 'Do Hyeon', sans-serif\" align=left><span style=\"display:block; height: 30px;\">&emsp;&emsp;Meus produtos</span></h3>");
@@ -56,7 +56,7 @@
 				$sql = mysqli_query($conn,"SELECT * FROM produtos WHERE id=$linha") or die (mysqli_error($conn)); //Começa as putaria.
 				$dados = mysqli_fetch_array($sql);
 
-				if ($dados != null && $dados['Aprovado'] == true && $dados['Usuario'] == $vend && $login != $dados['Usuario']) {
+				if ($dados != null && $dados['Aprovado'] == true && strcasecmp($dados['Usuario'], $vend) ==  0 && strcasecmp($login, $dados['Usuario']) != 0) {
 						
 					echo("<div class=\"col-md-3 col-sm-6 p-3\">
 					<div class=\"card text-center\" > 
@@ -77,7 +77,7 @@
 						</div>
 					</div>
 				</div>");
-				} else if ($dados != null && $dados['Usuario'] == $vend && $dados['Usuario'] == $_SESSION['login']) {
+				} else if ($dados != null && strcasecmp($dados['Usuario'], $vend) == 0 && strcasecmp($dados['Usuario'], $_SESSION['login']) == 0) {
 						
 					echo("<div class=\"col-md-3 col-sm-6 p-3\">
 					<div class=\"card text-center\" > 
