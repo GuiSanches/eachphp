@@ -64,7 +64,7 @@
 						     Vendedor: </span>{$dados['Vendedor']}<br>
 								
 
-								<a style=\"margin-top: 10px;\" href=\"productsby.php?vend={$login}\" name=\"id\" id=\"id\" class=\"btn btn-primary\"><span style=\"font-size: 20px;\">Voltar</span></a>
+								<a style=\"margin-top: 10px;\" href=\"productsby.php?vend={$_SESSION['login']}\" name=\"id\" id=\"id\" class=\"btn btn-primary\"><span style=\"font-size: 20px;\">Voltar</span></a>
 
 								<button class='btn btn-primary' style=\"font-size: 20px; margin-bottom:-10px;\" type='submit'>Salvar</button>
 								</form>
