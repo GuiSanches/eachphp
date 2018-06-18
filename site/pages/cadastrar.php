@@ -1,6 +1,6 @@
 <?php
-
-$conn = new mysqli("localhost", "root", "", "coolsunday");
+require '../resources/config.php';
+$conn = mysqli_connect($host, $user, $password, $bd);
 
 $nome = $_POST['uname'];
 $usuario = $_POST['user'];
