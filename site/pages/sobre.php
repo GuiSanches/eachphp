@@ -35,13 +35,13 @@
 			<div class="card text-center" > 
 				<div class="card-block box shadow" >
 					<div class="card-title"> 
-						<h4 class="card-title-text">André</h4>
+						<h4 class="card-title-text">André Jambeiro</h4>
 					</div>
 					<img src="https://www.famousbirthdays.com/faces/zuckerberg-mark-image.jpg" class="img-fluid thumb1" width="110px">
 					<br>
 					<br>
 					<div class="card-text">
-						<a style="margin-top: 10px;" href="#" class="btn btn-primary">Número USP: 000000</a>
+						<a style="margin-top: 10px;" href="#" class="btn btn-primary">Número USP: 10724031</a>
 					</div>
 				</div>
 			</div>
@@ -57,7 +57,7 @@
 					<br>
 					<br>
 					<div class="card-text">
-						<a style="margin-top: 10px;" href="#" class="btn btn-primary">Número USP: 000000</a>
+						<a style="margin-top: 10px;" href="#" class="btn btn-primary">Número USP: 10723951</a>
 					</div>
 				</div>
 			</div>
@@ -73,7 +73,7 @@
 					<br>
 					<br>
 					<div class="card-text">
-						<a style="margin-top: 10px;" href="#" class="btn btn-primary">Número USP: 000000</a>
+						<a style="margin-top: 10px;" href="#" class="btn btn-primary">Número USP: 10857082</a>
 					</div>
 				</div>
 			</div>
@@ -105,7 +105,7 @@
 					<br>
 					<br>
 					<div class="card-text">
-						<a style="margin-top: 10px;" href="#" class="btn btn-primary">Número USP: 000000</a>
+						<a style="margin-top: 10px;" href="#" class="btn btn-primary">Número USP: 10724156</a>
 					</div>
 				</div>
 			</div>
