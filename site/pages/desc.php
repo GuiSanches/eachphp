@@ -39,7 +39,7 @@
 	$sql = mysqli_query($conn,"SELECT * FROM vendedor WHERE usuario='".$dados['Usuario']."'") or die (mysqli_error($conn));
 	$dadosVend = mysqli_fetch_array($sql);
 
-	echo("<center>
+	echo ("<center>
 		<div class=\"col-md-8 col-sm-8 p-3\">
 					<div class=\"card text-center\" > 
 						<div class=\"card-block box shadow\" >
@@ -50,7 +50,7 @@
 								
 							<div class=\"card-text\">
 								
-								<span style=\"color: #fdb523; font-weight: bold;\">Descrição rápida: </span><br>{$dados['Descricao']}<br>
+								<span style=\"color: #fdb523; font-weight: bold;\">Descrição rápida: </span><br>".nl2br($dados['Descricao'])."<br>
 								<span style=\"color: green; font-weight: bold;\">Preço: </span> R$ {$dados['Preco']}<br>
 								<span style=\"color: blue; font-weight: bold;\">Local: </span>{$dadosVend['local']}<br>
 								<span style=\"color: red; font-weight: bold;\">Vendedor: </span>{$dados['Vendedor']}<br>
