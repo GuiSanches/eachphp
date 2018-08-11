@@ -1,5 +1,11 @@
-# Importante! Comidinhas EACH - PHP Edition BETA.
+# Importante! (PoC) | Comidinhas EACH
 Aqui estão reunidas instruções para começar a utilizar o repositório e programar no projeto de Fundamentos de Sistemas de Informação da turma 2018 de SI na USP Leste.
+
+### Nota:
+
+Este site foi desenvolvido em uma disciplina teórica do primeiro semestre. A proposta de entrega de um sistema ao final do semestre com um mínimo de orientação foi feita pelo professor visando que aprendessemos a aprender, cumprindo com a ideia dele de "mostrar que a computação é sim possível" para nós.
+
+Tendo em vista isso, é importante observar que todo o projeto foi feito por 5 integrantes em menos de 3 meses que (com exceção de 1) não sabiam programar. Por isso, se estiver lendo isso não espere códigos ideais para este tipo de sistema, pois o grupo de maneira geral não teve tempo de amadurecer os conhecimentos sendo este repositório apenas uma memória do que conseguimos alcançar na disciplina.
 
 ## Instalando e usando o WampServer
 Faça o download aqui:
