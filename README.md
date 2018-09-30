@@ -1,4 +1,4 @@
-# Importante! (PoC) | Comidinhas EACH
+# Importante! (PoC) | Comidinhas EACH (PT-BR)
 Aqui estão reunidas instruções para começar a utilizar o repositório e programar no projeto de Fundamentos de Sistemas de Informação da turma 2018 de SI na USP Leste.
 
 ### Nota:
